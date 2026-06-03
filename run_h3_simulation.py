@@ -142,7 +142,7 @@ def main():
             if not exists: w.writeheader()
             w.writerow(out)
         n_new += 1
-        time.sleep(0.2)
+        # time.sleep(0.2)  # removed for speed
 
     print(f"\nDone. New: {n_new}, Total: {len(done)+n_new}")
 

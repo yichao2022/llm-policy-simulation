@@ -7,6 +7,10 @@ Llama 3.1 70B Instruct,neutral,38.15,6.63,135
 Llama 3.1 70B Instruct,autonomy,40.48,4.96,135
 Llama 3.1 70B Instruct,collective,21.96,4.15,135
 Llama 3.1 70B Instruct,equity,38.04,9.52,135
+Mistral Large,neutral,30.48,6.01,135
+Mistral Large,autonomy,33.81,5.23,135
+Mistral Large,collective,23.37,7.4,135
+Mistral Large,equity,37.41,5.89,135
 Qwen3.6-72B Instruct,neutral,34.3,6.11,135
 Qwen3.6-72B Instruct,autonomy,36.15,7.45,135
 Qwen3.6-72B Instruct,collective,23.33,8.15,135

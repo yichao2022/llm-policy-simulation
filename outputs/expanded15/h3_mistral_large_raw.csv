@@ -1,0 +1,1153 @@
+model,provider,api_model,frame,profile_id,burden_level,repetition,json_valid,score_valid,non_refusal,willingness,rationale,raw_output,error,timestamp_utc
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,low,1,True,True,True,70,"Low-income, time-constrained individuals with medium trust in authorities are generally willing if access barriers are minimized; the convenient, flexible, and low-effort scenario addresses key practical concerns.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""Low-income, time-constrained individuals with medium trust in authorities are generally willing if access barriers are minimized; the convenient, flexible, and low-effort scenario addresses key practical concerns.""
+}
+```",,2026-06-05T04:33:51.738202+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,high,1,True,True,True,30,"Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.""
+}
+```",,2026-06-05T04:33:53.724871+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,low,2,True,True,True,70,"High convenience (nearby, flexible hours, minimal time/disruption) offsets low income and lack of healthcare access, while medium trust in authorities suggests moderate baseline willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time/disruption) offsets low income and lack of healthcare access, while medium trust in authorities suggests moderate baseline willingness.""
+}
+```",,2026-06-05T04:33:55.228993+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,high,2,True,True,True,30,"Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.""
+}
+```",,2026-06-05T04:33:56.670934+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,low,3,True,True,True,70,"High convenience (nearby, flexible hours, minimal time commitment) likely outweighs logistical barriers, though medium trust in authorities and lack of healthcare access may slightly reduce willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) likely outweighs logistical barriers, though medium trust in authorities and lack of healthcare access may slightly reduce willingness.""
+}
+```",,2026-06-05T04:33:58.164541+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,high,3,True,True,True,30,"Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.""
+}
+```",,2026-06-05T04:33:59.535485+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,low,4,True,True,True,70,"Low-income, time-constrained individuals with medium trust in authorities are generally willing if access barriers are minimized; the convenient, low-friction scenario addresses her logistical challenges.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""Low-income, time-constrained individuals with medium trust in authorities are generally willing if access barriers are minimized; the convenient, low-friction scenario addresses her logistical challenges.""
+}
+```",,2026-06-05T04:34:01.005695+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,high,4,True,True,True,30,"Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:02.553881+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,low,5,True,True,True,70,"High accessibility (nearby, flexible hours, minimal time/disruption) offsets low income and lack of healthcare access, while medium trust in authorities suggests moderate baseline willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time/disruption) offsets low income and lack of healthcare access, while medium trust in authorities suggests moderate baseline willingness.""
+}
+```",,2026-06-05T04:34:04.002921+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P01,high,5,True,True,True,30,"Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low income, lack of flexible work hours, childcare responsibilities, and logistical barriers (in-person registration, documentation, long wait times) significantly reduce willingness despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:05.407442+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,low,1,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, lack of regular healthcare access), though medium trust in authorities and low income may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, lack of regular healthcare access), though medium trust in authorities and low income may slightly dampen willingness.""
+}
+```",,2026-06-05T04:34:06.890316+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,high,1,True,True,True,30,"Low willingness due to significant logistical barriers (time off work, long wait, paperwork), lack of regular healthcare access, and the burden of arranging childcare for a 1-2 hour wait.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low willingness due to significant logistical barriers (time off work, long wait, paperwork), lack of regular healthcare access, and the burden of arranging childcare for a 1-2 hour wait.""
+}
+```",,2026-06-05T04:34:08.549847+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,low,2,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) aligns with her constraints (full-time job, childcare), though medium trust in authorities and lack of regular healthcare may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) aligns with her constraints (full-time job, childcare), though medium trust in authorities and lack of regular healthcare may slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:10.045537+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,high,2,True,True,True,30,"Low willingness due to significant logistical barriers (time off work, childcare, long wait), lack of regular healthcare access, and medium trust in authorities, despite potential need for vaccination.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low willingness due to significant logistical barriers (time off work, childcare, long wait), lack of regular healthcare access, and medium trust in authorities, despite potential need for vaccination.""
+}
+```",,2026-06-05T04:34:11.634280+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,low,3,True,True,True,75,"High convenience (nearby, flexible hours, minimal time/disruption) aligns with her constraints, though medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time/disruption) aligns with her constraints, though medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:12.933785+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,high,3,True,True,True,40,"Logistical barriers (time off work, childcare, long wait) and documentation requirements reduce willingness, despite medium trust in authorities and potential health concerns.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Logistical barriers (time off work, childcare, long wait) and documentation requirements reduce willingness, despite medium trust in authorities and potential health concerns.""
+}
+```",,2026-06-05T04:34:14.354808+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,low,4,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, lack of regular healthcare access), though medium trust in authorities and low income may slightly temper willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, lack of regular healthcare access), though medium trust in authorities and low income may slightly temper willingness.""
+}
+```",,2026-06-05T04:34:15.655105+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,high,4,True,True,True,40,"Logistical barriers (time off work, childcare, long wait) and documentation requirements likely reduce willingness, despite medium trust in authorities and potential health concerns.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Logistical barriers (time off work, childcare, long wait) and documentation requirements likely reduce willingness, despite medium trust in authorities and potential health concerns.""
+}
+```",,2026-06-05T04:34:17.263372+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,low,5,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) aligns with her constraints (full-time job, childcare), though medium trust in authorities and lack of regular healthcare may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) aligns with her constraints (full-time job, childcare), though medium trust in authorities and lack of regular healthcare may slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:18.636578+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P01,high,5,True,True,True,30,"High logistical barriers (time off work, childcare, long wait) and lack of prior healthcare access reduce willingness, despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High logistical barriers (time off work, childcare, long wait) and lack of prior healthcare access reduce willingness, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:20.207430+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,low,1,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time/disruption) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and lack of regular healthcare may slightly temper willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time/disruption) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and lack of regular healthcare may slightly temper willingness.""
+}
+```",,2026-06-05T04:34:21.341774+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,high,1,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, lengthy in-person process) and lack of healthcare access significantly reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, lengthy in-person process) and lack of healthcare access significantly reduce willingness.""
+}
+```",,2026-06-05T04:34:22.756841+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,low,2,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) and civic responsibility likely outweigh logistical barriers, though medium trust in authorities and lack of healthcare access may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) and civic responsibility likely outweigh logistical barriers, though medium trust in authorities and lack of healthcare access may slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:24.120013+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,high,2,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, lengthy in-person process) and lack of healthcare access significantly reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, lengthy in-person process) and lack of healthcare access significantly reduce willingness.""
+}
+```",,2026-06-05T04:34:25.489603+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,low,3,True,True,True,75,"High convenience (nearby, flexible hours, minimal time) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and lack of healthcare access may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and lack of healthcare access may slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:26.839422+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,high,3,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait, documentation) and lack of healthcare access significantly reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait, documentation) and lack of healthcare access significantly reduce willingness.""
+}
+```",,2026-06-05T04:34:28.199824+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,low,4,True,True,True,70,"High accessibility (flexible hours, nearby location, minimal time commitment) and civic responsibility likely outweigh logistical barriers, though medium trust in authorities and lack of healthcare access may slightly reduce willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High accessibility (flexible hours, nearby location, minimal time commitment) and civic responsibility likely outweigh logistical barriers, though medium trust in authorities and lack of healthcare access may slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:29.521870+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,high,4,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, lengthy in-person process) and lack of healthcare access significantly reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, lengthy in-person process) and lack of healthcare access significantly reduce willingness.""
+}
+```",,2026-06-05T04:34:30.806543+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,low,5,True,True,True,75,"High convenience (nearby, flexible hours, minimal time) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and lack of healthcare access may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and lack of healthcare access may slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:32.174893+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P01,high,5,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait, documentation) and lack of healthcare access significantly reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait, documentation) and lack of healthcare access significantly reduce willingness.""
+}
+```",,2026-06-05T04:34:33.536751+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,low,1,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate logistical challenges, while medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate logistical challenges, while medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.""
+}
+```",,2026-06-05T04:34:34.929292+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,high,1,True,True,True,30,"High procedural costs (time off work, childcare, long wait, documentation) and lack of convenient access (no regular clinic) significantly reduce willingness despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait, documentation) and lack of convenient access (no regular clinic) significantly reduce willingness despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:36.322935+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,low,2,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her logistical challenges, though financial constraints and lack of healthcare access may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her logistical challenges, though financial constraints and lack of healthcare access may slightly dampen willingness.""
+}
+```",,2026-06-05T04:34:37.748764+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,high,2,True,True,True,30,"High procedural costs (time off work, childcare, long wait, documentation) disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait, documentation) disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:39.175084+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,low,3,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but time constraints from work and childcare, along with medium trust in authorities, may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but time constraints from work and childcare, along with medium trust in authorities, may slightly dampen willingness.""
+}
+```",,2026-06-05T04:34:40.488079+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,high,3,True,True,True,30,"High procedural costs (time off work, childcare, long wait, documentation) disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait, documentation) disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:42.006502+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,low,4,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but time constraints from work and childcare, along with medium trust in authorities, may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but time constraints from work and childcare, along with medium trust in authorities, may slightly dampen willingness.""
+}
+```",,2026-06-05T04:34:43.324610+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,high,4,True,True,True,30,"High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:44.789338+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,low,5,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but time constraints from work and childcare, along with medium trust in authorities, may slightly limit willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but time constraints from work and childcare, along with medium trust in authorities, may slightly limit willingness.""
+}
+```",,2026-06-05T04:34:46.144946+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P01,high,5,True,True,True,30,"High procedural costs (time off work, childcare, long wait, documentation) disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait, documentation) disproportionately burden her low-income, time-constrained situation, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:34:47.783074+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,low,1,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs barriers like low income and medium trust in authorities, especially given the need to protect her young child.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs barriers like low income and medium trust in authorities, especially given the need to protect her young child.""
+}
+```",,2026-06-05T04:34:49.126548+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,high,1,True,True,True,40,"Low-income, time constraints, and logistical barriers (e.g., travel, paperwork, wait times) reduce willingness, though medium trust in authorities and access to a regular doctor slightly offset this.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low-income, time constraints, and logistical barriers (e.g., travel, paperwork, wait times) reduce willingness, though medium trust in authorities and access to a regular doctor slightly offset this.""
+}
+```",,2026-06-05T04:34:50.636194+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,low,2,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) offsets barriers like low income and logistical challenges, while medium trust in authorities suggests moderate baseline willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) offsets barriers like low income and logistical challenges, while medium trust in authorities suggests moderate baseline willingness.""
+}
+```",,2026-06-05T04:34:51.944543+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,high,2,True,True,True,40,"Low income, time constraints, and logistical barriers (distance, paperwork, wait times) reduce willingness, though medium trust in authorities and responsibility for a young child provide moderate motivation.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low income, time constraints, and logistical barriers (distance, paperwork, wait times) reduce willingness, though medium trust in authorities and responsibility for a young child provide moderate motivation.""
+}
+```",,2026-06-05T04:34:53.393016+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,low,3,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) offsets barriers like low income and logistical challenges, while medium trust in authorities suggests moderate baseline willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) offsets barriers like low income and logistical challenges, while medium trust in authorities suggests moderate baseline willingness.""
+}
+```",,2026-06-05T04:34:54.793390+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,high,3,True,True,True,40,"Low-income, time constraints, and logistical barriers (distance, paperwork, wait times) reduce willingness, though medium trust in authorities and access to a regular doctor slightly offset this.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low-income, time constraints, and logistical barriers (distance, paperwork, wait times) reduce willingness, though medium trust in authorities and access to a regular doctor slightly offset this.""
+}
+```",,2026-06-05T04:34:56.362451+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,low,4,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) offsets barriers like low income and logistical challenges, while medium trust in authorities suggests moderate baseline willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) offsets barriers like low income and logistical challenges, while medium trust in authorities suggests moderate baseline willingness.""
+}
+```",,2026-06-05T04:34:57.726952+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,high,4,True,True,True,40,"Low income, time constraints, and logistical barriers (distance, paperwork, wait times) reduce willingness, though medium trust in authorities and access to a regular doctor provide moderate counterbalance.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low income, time constraints, and logistical barriers (distance, paperwork, wait times) reduce willingness, though medium trust in authorities and access to a regular doctor provide moderate counterbalance.""
+}
+```",,2026-06-05T04:34:59.228362+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,low,5,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) offsets low income and logistical barriers, while medium trust in authorities suggests moderate baseline willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) offsets low income and logistical barriers, while medium trust in authorities suggests moderate baseline willingness.""
+}
+```",,2026-06-05T04:35:00.627664+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P02,high,5,True,True,True,30,"Low income, time constraints, and logistical barriers (e.g., travel, paperwork, wait times) significantly reduce willingness, despite medium trust in authorities and access to a regular doctor.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""Low income, time constraints, and logistical barriers (e.g., travel, paperwork, wait times) significantly reduce willingness, despite medium trust in authorities and access to a regular doctor.""
+}
+```",,2026-06-05T04:35:01.987081+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,low,1,True,True,True,80,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, distance to clinic), while medium trust in authorities is offset by ease of access.","```json
+{
+  ""willingness"": 80,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, distance to clinic), while medium trust in authorities is offset by ease of access.""
+}
+```",,2026-06-05T04:35:03.288005+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,high,1,True,True,True,40,"The logistical barriers (time off work, travel distance, lengthy in-person process) and documentation requirements significantly reduce willingness, despite medium trust in authorities and need for healthcare access.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (time off work, travel distance, lengthy in-person process) and documentation requirements significantly reduce willingness, despite medium trust in authorities and need for healthcare access.""
+}
+```",,2026-06-05T04:35:04.740370+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,low,2,True,True,True,80,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work schedule, childcare, distance to regular clinic), while medium trust in authorities suggests she may proceed if barriers are low.","```json
+{
+  ""willingness"": 80,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work schedule, childcare, distance to regular clinic), while medium trust in authorities suggests she may proceed if barriers are low.""
+}
+```",,2026-06-05T04:35:06.190436+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,high,2,True,True,True,40,"The logistical barriers (time off work, travel, long wait, paperwork) and low household income likely reduce willingness, despite medium trust in public health authorities and need for healthcare access.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (time off work, travel, long wait, paperwork) and low household income likely reduce willingness, despite medium trust in public health authorities and need for healthcare access.""
+}
+```",,2026-06-05T04:35:07.713560+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,low,3,True,True,True,85,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her logistical constraints, while medium trust in authorities and accessible process reduce barriers.","```json
+{
+  ""willingness"": 85,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her logistical constraints, while medium trust in authorities and accessible process reduce barriers.""
+}
+```",,2026-06-05T04:35:09.087285+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,high,3,True,True,True,40,"The logistical barriers (time off work, travel distance, long wait, paperwork) and low household income likely reduce willingness, despite medium trust in authorities and need for childcare-related health access.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (time off work, travel distance, long wait, paperwork) and low household income likely reduce willingness, despite medium trust in authorities and need for childcare-related health access.""
+}
+```",,2026-06-05T04:35:10.407875+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,low,4,True,True,True,80,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work schedule, childcare, distance to regular clinic), though medium trust in authorities slightly tempers willingness.","```json
+{
+  ""willingness"": 80,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work schedule, childcare, distance to regular clinic), though medium trust in authorities slightly tempers willingness.""
+}
+```",,2026-06-05T04:35:11.782456+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,high,4,True,True,True,40,"The logistical barriers (time off work, travel distance, lengthy in-person process) and documentation requirements significantly reduce willingness, despite medium trust in authorities and potential health concerns for her child.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (time off work, travel distance, lengthy in-person process) and documentation requirements significantly reduce willingness, despite medium trust in authorities and potential health concerns for her child.""
+}
+```",,2026-06-05T04:35:13.328374+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,low,5,True,True,True,80,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, distance to clinic), while medium trust in authorities suggests she may proceed if barriers are low.","```json
+{
+  ""willingness"": 80,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (work, childcare, distance to clinic), while medium trust in authorities suggests she may proceed if barriers are low.""
+}
+```",,2026-06-05T04:35:14.812872+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P02,high,5,True,True,True,40,"Logistical barriers (time off work, travel distance, long wait) and documentation requirements likely reduce willingness, despite medium trust in authorities and need for healthcare access.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Logistical barriers (time off work, travel distance, long wait) and documentation requirements likely reduce willingness, despite medium trust in authorities and need for healthcare access.""
+}
+```",,2026-06-05T04:35:16.362010+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,low,1,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) offsets logistical barriers, while medium trust in public health and civic responsibility likely encourage compliance despite income and childcare constraints.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) offsets logistical barriers, while medium trust in public health and civic responsibility likely encourage compliance despite income and childcare constraints.""
+}
+```",,2026-06-05T04:35:17.853243+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,high,1,True,True,True,40,"The individual faces significant logistical barriers (time off work, childcare, travel distance, lengthy in-person process) despite medium trust in authorities, reducing willingness. Civic responsibility may motivate her, but practical constraints likely outweigh it.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The individual faces significant logistical barriers (time off work, childcare, travel distance, lengthy in-person process) despite medium trust in authorities, reducing willingness. Civic responsibility may motivate her, but practical constraints likely outweigh it.""
+}
+```",,2026-06-05T04:35:19.346440+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,low,2,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) and medium trust in public health likely outweigh logistical barriers (income, childcare, job constraints), especially given civic responsibility.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) and medium trust in public health likely outweigh logistical barriers (income, childcare, job constraints), especially given civic responsibility.""
+}
+```",,2026-06-05T04:35:20.952203+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,high,2,True,True,True,40,"Moderate trust in public health and logistical barriers (time off work, childcare, travel, long wait) reduce willingness, though civic responsibility may slightly offset inconvenience.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and logistical barriers (time off work, childcare, travel, long wait) reduce willingness, though civic responsibility may slightly offset inconvenience.""
+}
+```",,2026-06-05T04:35:22.262618+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,low,3,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) offsets logistical barriers, while medium trust in authorities and civic responsibility likely encourage compliance despite income and childcare constraints.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) offsets logistical barriers, while medium trust in authorities and civic responsibility likely encourage compliance despite income and childcare constraints.""
+}
+```",,2026-06-05T04:35:23.468423+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,high,3,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, travel, and lengthy in-person process) significantly reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, travel, and lengthy in-person process) significantly reduce willingness.""
+}
+```",,2026-06-05T04:35:24.912495+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,low,4,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) addresses key barriers, while medium trust in public health and civic responsibility likely motivate compliance despite logistical challenges.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) addresses key barriers, while medium trust in public health and civic responsibility likely motivate compliance despite logistical challenges.""
+}
+```",,2026-06-05T04:35:26.310777+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,high,4,True,True,True,40,"The individual faces significant logistical barriers (time off work, travel distance, childcare, lengthy in-person process) despite medium trust in authorities, reducing willingness. Civic responsibility may motivate her, but practical constraints likely outweigh it.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The individual faces significant logistical barriers (time off work, travel distance, childcare, lengthy in-person process) despite medium trust in authorities, reducing willingness. Civic responsibility may motivate her, but practical constraints likely outweigh it.""
+}
+```",,2026-06-05T04:35:27.714751+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,low,5,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) offsets logistical barriers, while medium trust in authorities and civic responsibility likely encourage compliance despite income and childcare constraints.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) offsets logistical barriers, while medium trust in authorities and civic responsibility likely encourage compliance despite income and childcare constraints.""
+}
+```",,2026-06-05T04:35:29.309846+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P02,high,5,True,True,True,40,"The individual faces significant logistical barriers (time off work, childcare, travel distance, and lengthy in-person process) despite medium trust in authorities, reducing willingness. Civic responsibility may motivate her, but practical constraints likely outweigh it.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The individual faces significant logistical barriers (time off work, childcare, travel distance, and lengthy in-person process) despite medium trust in authorities, reducing willingness. Civic responsibility may motivate her, but practical constraints likely outweigh it.""
+}
+```",,2026-06-05T04:35:30.744842+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,low,1,True,True,True,85,"Low procedural barriers (nearby location, flexible hours, minimal documentation) and minimal time commitment significantly reduce logistical challenges, despite her medium trust in authorities and time constraints.","```json
+{
+  ""willingness"": 85,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal documentation) and minimal time commitment significantly reduce logistical challenges, despite her medium trust in authorities and time constraints.""
+}
+```",,2026-06-05T04:35:32.353406+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,high,1,True,True,True,30,"High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and existing healthcare access.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and existing healthcare access.""
+}
+```",,2026-06-05T04:35:33.670735+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,low,2,True,True,True,85,"Low procedural barriers (nearby location, flexible hours, minimal documentation) and minimal time commitment (15 minutes) significantly reduce logistical challenges, despite her low income, childcare responsibilities, and job constraints.","```json
+{
+  ""willingness"": 85,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal documentation) and minimal time commitment (15 minutes) significantly reduce logistical challenges, despite her low income, childcare responsibilities, and job constraints.""
+}
+```",,2026-06-05T04:35:34.965340+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,high,2,True,True,True,30,"High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and existing healthcare access.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and existing healthcare access.""
+}
+```",,2026-06-05T04:35:36.500720+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,low,3,True,True,True,85,"Low procedural barriers (nearby location, flexible hours, minimal time commitment) significantly reduce logistical challenges, while her medium trust in authorities and need for convenience align with the accessible scenario.","```json
+{
+  ""willingness"": 85,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal time commitment) significantly reduce logistical challenges, while her medium trust in authorities and need for convenience align with the accessible scenario.""
+}
+```",,2026-06-05T04:35:37.801229+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,high,3,True,True,True,40,"High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and access to a regular doctor.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and access to a regular doctor.""
+}
+```",,2026-06-05T04:35:39.194874+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,low,4,True,True,True,85,"Low procedural barriers (nearby location, flexible hours, minimal documentation) and minimal time commitment (15 minutes) significantly reduce logistical challenges, despite her low income, childcare responsibilities, and job constraints.","```json
+{
+  ""willingness"": 85,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal documentation) and minimal time commitment (15 minutes) significantly reduce logistical challenges, despite her low income, childcare responsibilities, and job constraints.""
+}
+```",,2026-06-05T04:35:40.528568+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,high,4,True,True,True,30,"High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and existing healthcare access.","```json
+{
+  ""willingness"": 30,
+  ""rationale"": ""High procedural costs (time off work, travel, long wait) and childcare barriers significantly reduce willingness, despite medium trust in authorities and existing healthcare access.""
+}
+```",,2026-06-05T04:35:41.960004+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,low,5,True,True,True,85,"Low procedural barriers (nearby location, flexible hours, minimal time commitment) significantly reduce logistical challenges, while her medium trust in authorities and need for convenience align with the accessible scenario.","```json
+{
+  ""willingness"": 85,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal time commitment) significantly reduce logistical challenges, while her medium trust in authorities and need for convenience align with the accessible scenario.""
+}
+```",,2026-06-05T04:35:44.176316+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P02,high,5,True,True,True,40,"High procedural costs (time off work, travel, long wait) and logistical barriers (childcare, documentation) disproportionately burden her, despite medium trust in authorities and existing healthcare access.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time off work, travel, long wait) and logistical barriers (childcare, documentation) disproportionately burden her, despite medium trust in authorities and existing healthcare access.""
+}
+```",,2026-06-05T04:35:45.595550+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,low,1,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) and existing trust in healthcare likely outweigh income/education barriers, though logistical challenges (childcare, work constraints) may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) and existing trust in healthcare likely outweigh income/education barriers, though logistical challenges (childcare, work constraints) may slightly reduce willingness.""
+}
+```",,2026-06-05T04:35:46.992107+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,high,1,True,True,True,40,"Moderate trust in public health and access to a regular doctor slightly increase willingness, but logistical barriers (time off work, childcare, long wait, paperwork) and low income likely reduce it.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and access to a regular doctor slightly increase willingness, but logistical barriers (time off work, childcare, long wait, paperwork) and low income likely reduce it.""
+}
+```",,2026-06-05T04:35:48.512894+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,low,2,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) and existing trust in healthcare systems likely outweigh income/education barriers, though logistical constraints (childcare, work) may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) and existing trust in healthcare systems likely outweigh income/education barriers, though logistical constraints (childcare, work) may slightly reduce willingness.""
+}
+```",,2026-06-05T04:35:49.888407+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,high,2,True,True,True,40,"Low income, inflexible job, and childcare responsibilities increase barriers, while medium trust in authorities and access to a regular doctor slightly offset logistical challenges.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low income, inflexible job, and childcare responsibilities increase barriers, while medium trust in authorities and access to a regular doctor slightly offset logistical challenges.""
+}
+```",,2026-06-05T04:35:51.445460+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,low,3,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time/disruption) and existing healthcare access likely outweigh income constraints and medium trust, though childcare logistics may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time/disruption) and existing healthcare access likely outweigh income constraints and medium trust, though childcare logistics may slightly reduce willingness.""
+}
+```",,2026-06-05T04:35:52.767479+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,high,3,True,True,True,40,"Moderate trust in public health and ease of doctor access suggest some willingness, but logistical barriers (time off work, childcare, long wait, paperwork) and low income likely reduce motivation.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and ease of doctor access suggest some willingness, but logistical barriers (time off work, childcare, long wait, paperwork) and low income likely reduce motivation.""
+}
+```",,2026-06-05T04:35:54.220463+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,low,4,True,True,True,75,"High accessibility (convenient location, flexible hours, minimal time commitment) and existing trust in healthcare providers likely outweigh logistical barriers, though financial constraints and time management for childcare may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (convenient location, flexible hours, minimal time commitment) and existing trust in healthcare providers likely outweigh logistical barriers, though financial constraints and time management for childcare may slightly reduce willingness.""
+}
+```",,2026-06-05T04:35:55.613459+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,high,4,True,True,True,40,"Moderate trust in public health and ease of medical access slightly favor willingness, but logistical barriers (time off work, childcare, long wait, paperwork) and low income reduce likelihood of compliance.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and ease of medical access slightly favor willingness, but logistical barriers (time off work, childcare, long wait, paperwork) and low income reduce likelihood of compliance.""
+}
+```",,2026-06-05T04:35:57.000131+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,low,5,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) and existing trust in healthcare systems likely outweigh income/education barriers, though logistical constraints (childcare, work) may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) and existing trust in healthcare systems likely outweigh income/education barriers, though logistical constraints (childcare, work) may slightly reduce willingness.""
+}
+```",,2026-06-05T04:35:58.396317+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P03,high,5,True,True,True,40,"Low-income, time constraints, and logistical barriers (e.g., in-person registration, documentation requirements) reduce willingness, though trust in public health and access to a regular doctor slightly mitigate this.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low-income, time constraints, and logistical barriers (e.g., in-person registration, documentation requirements) reduce willingness, though trust in public health and access to a regular doctor slightly mitigate this.""
+}
+```",,2026-06-05T04:35:59.827800+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,low,1,True,True,True,75,"High convenience (nearby, flexible hours, quick process) and easy access to healthcare likely outweigh medium trust in authorities, though financial/time constraints may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, quick process) and easy access to healthcare likely outweigh medium trust in authorities, though financial/time constraints may slightly reduce willingness.""
+}
+```",,2026-06-05T04:36:01.165920+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,high,1,True,True,True,40,"The individual faces significant logistical barriers (time off work, long wait, paperwork) and has low income, which may reduce willingness despite medium trust in authorities and access to healthcare.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The individual faces significant logistical barriers (time off work, long wait, paperwork) and has low income, which may reduce willingness despite medium trust in authorities and access to healthcare.""
+}
+```",,2026-06-05T04:36:02.810569+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,low,2,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) aligns with her busy schedule and medium trust in authorities, though financial constraints and limited education may slightly reduce urgency.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) aligns with her busy schedule and medium trust in authorities, though financial constraints and limited education may slightly reduce urgency.""
+}
+```",,2026-06-05T04:36:04.241448+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,high,2,True,True,True,40,"The logistical barriers (in-person registration, documentation, long wait times, and advance scheduling) disproportionately burden someone with limited time, income, and childcare responsibilities, despite her medium trust in authorities and access to healthcare.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (in-person registration, documentation, long wait times, and advance scheduling) disproportionately burden someone with limited time, income, and childcare responsibilities, despite her medium trust in authorities and access to healthcare.""
+}
+```",,2026-06-05T04:36:05.636370+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,low,3,True,True,True,75,"High convenience (nearby, flexible hours, quick process) and easy access to healthcare likely outweigh medium trust in authorities, but financial/time constraints and childcare responsibilities may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, quick process) and easy access to healthcare likely outweigh medium trust in authorities, but financial/time constraints and childcare responsibilities may slightly reduce willingness.""
+}
+```",,2026-06-05T04:36:07.241532+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,high,3,True,True,True,40,"Low willingness due to logistical barriers (time off work, long wait, paperwork) despite trust in health authorities and access to a regular doctor, compounded by childcare responsibilities.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low willingness due to logistical barriers (time off work, long wait, paperwork) despite trust in health authorities and access to a regular doctor, compounded by childcare responsibilities.""
+}
+```",,2026-06-05T04:36:08.765965+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,low,4,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (full-time job, childcare). Medium trust in authorities and easy access reduce barriers, though financial/time pressures may slightly temper enthusiasm.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her constraints (full-time job, childcare). Medium trust in authorities and easy access reduce barriers, though financial/time pressures may slightly temper enthusiasm.""
+}
+```",,2026-06-05T04:36:10.064399+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,high,4,True,True,True,40,"The logistical barriers (in-person registration, documentation, long wait, advance scheduling) combined with her full-time job and childcare responsibilities likely reduce willingness, despite medium trust in authorities and access to healthcare.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (in-person registration, documentation, long wait, advance scheduling) combined with her full-time job and childcare responsibilities likely reduce willingness, despite medium trust in authorities and access to healthcare.""
+}
+```",,2026-06-05T04:36:11.809384+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,low,5,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) aligns with her busy schedule and medium trust in authorities, though financial/time constraints may slightly reduce urgency.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) aligns with her busy schedule and medium trust in authorities, though financial/time constraints may slightly reduce urgency.""
+}
+```",,2026-06-05T04:36:13.263949+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P03,high,5,True,True,True,40,"The logistical barriers (in-person registration, documentation, long wait times, and advance scheduling) combined with her full-time job and childcare responsibilities likely reduce her willingness, despite her medium trust in public health authorities.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (in-person registration, documentation, long wait times, and advance scheduling) combined with her full-time job and childcare responsibilities likely reduce her willingness, despite her medium trust in public health authorities.""
+}
+```",,2026-06-05T04:36:14.642100+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,low,1,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) and existing healthcare access likely outweigh income constraints and medium trust in authorities, especially with childcare responsibilities motivating civic health participation.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) and existing healthcare access likely outweigh income constraints and medium trust in authorities, especially with childcare responsibilities motivating civic health participation.""
+}
+```",,2026-06-05T04:36:16.020058+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,high,1,True,True,True,50,"Moderate willingness due to medium trust in public health and ease of medical access, but logistical barriers (time off work, long wait, paperwork) and childcare needs may deter her.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate willingness due to medium trust in public health and ease of medical access, but logistical barriers (time off work, long wait, paperwork) and childcare needs may deter her.""
+}
+```",,2026-06-05T04:36:17.684963+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,low,2,True,True,True,75,"High convenience (nearby, flexible hours, minimal time commitment) and access to healthcare likely outweigh income constraints and medium trust in authorities, especially given civic responsibility for her child's well-being.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time commitment) and access to healthcare likely outweigh income constraints and medium trust in authorities, especially given civic responsibility for her child's well-being.""
+}
+```",,2026-06-05T04:36:18.977275+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,high,2,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait) and bureaucratic hurdles (paperwork, income verification) could significantly reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait) and bureaucratic hurdles (paperwork, income verification) could significantly reduce willingness.""
+}
+```",,2026-06-05T04:36:20.385455+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,low,3,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and childcare needs may slightly reduce urgency.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and childcare needs may slightly reduce urgency.""
+}
+```",,2026-06-05T04:36:21.762602+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,high,3,True,True,True,50,"Moderate willingness due to medium trust in public health and ease of doctor access, but logistical barriers (time off work, long wait, paperwork) and childcare needs may deter her.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate willingness due to medium trust in public health and ease of doctor access, but logistical barriers (time off work, long wait, paperwork) and childcare needs may deter her.""
+}
+```",,2026-06-05T04:36:23.150263+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,low,4,True,True,True,75,"Her medium trust in public health, convenient access (nearby, flexible hours, minimal time), and civic responsibility likely outweigh logistical concerns, though financial/time constraints may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Her medium trust in public health, convenient access (nearby, flexible hours, minimal time), and civic responsibility likely outweigh logistical concerns, though financial/time constraints may slightly reduce willingness.""
+}
+```",,2026-06-05T04:36:24.407687+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,high,4,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait) and income verification requirements likely reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (time off work, childcare, long wait) and income verification requirements likely reduce willingness.""
+}
+```",,2026-06-05T04:36:25.817428+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,low,5,True,True,True,75,"High accessibility (nearby, flexible hours, minimal time commitment) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and childcare needs may slightly reduce urgency.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High accessibility (nearby, flexible hours, minimal time commitment) and civic responsibility likely outweigh medium trust in authorities, though financial/time constraints and childcare needs may slightly reduce urgency.""
+}
+```",,2026-06-05T04:36:27.094732+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P03,high,5,True,True,True,50,"Moderate willingness due to medium trust in public health and civic responsibility, but logistical barriers (time off work, long wait, paperwork) and childcare needs may reduce compliance.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate willingness due to medium trust in public health and civic responsibility, but logistical barriers (time off work, long wait, paperwork) and childcare needs may reduce compliance.""
+}
+```",,2026-06-05T04:36:28.597677+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,low,1,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her constraints, but her low income, childcare responsibilities, and medium trust in authorities may still slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her constraints, but her low income, childcare responsibilities, and medium trust in authorities may still slightly reduce willingness.""
+}
+```",,2026-06-05T04:36:29.870149+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,high,1,True,True,True,40,"High procedural costs (time off work, long wait, childcare needs) and documentation barriers outweigh medium trust and access to a doctor, despite ease of scheduling appointments.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time off work, long wait, childcare needs) and documentation barriers outweigh medium trust and access to a doctor, despite ease of scheduling appointments.""
+}
+```",,2026-06-05T04:36:31.345179+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,low,2,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her constraints, though financial/time pressures and medium trust may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her constraints, though financial/time pressures and medium trust may slightly reduce willingness.""
+}
+```",,2026-06-05T04:36:32.603282+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,high,2,True,True,True,40,"High procedural costs (time off work, childcare, long wait) and documentation barriers outweigh medium trust and access to a doctor, especially given her low-income and inflexible job constraints.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait) and documentation barriers outweigh medium trust and access to a doctor, especially given her low-income and inflexible job constraints.""
+}
+```",,2026-06-05T04:36:34.013572+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,low,3,True,True,True,80,"Low procedural barriers (nearby location, flexible hours, minimal time commitment) mitigate her income and time constraints, while medium trust in authorities and easy access to appointments support willingness.","```json
+{
+  ""willingness"": 80,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal time commitment) mitigate her income and time constraints, while medium trust in authorities and easy access to appointments support willingness.""
+}
+```",,2026-06-05T04:36:35.413524+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,high,3,True,True,True,40,"High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite trust in authorities and access to a doctor.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite trust in authorities and access to a doctor.""
+}
+```",,2026-06-05T04:36:36.894641+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,low,4,True,True,True,80,"Low procedural barriers (nearby location, flexible hours, minimal time commitment) and easy access to appointments offset income constraints and time limitations, though medium trust in authorities slightly tempers willingness.","```json
+{
+  ""willingness"": 80,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal time commitment) and easy access to appointments offset income constraints and time limitations, though medium trust in authorities slightly tempers willingness.""
+}
+```",,2026-06-05T04:36:38.383056+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,high,4,True,True,True,40,"High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite trust in authorities and access to a doctor.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite trust in authorities and access to a doctor.""
+}
+```",,2026-06-05T04:36:39.781816+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,low,5,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her constraints, though financial and childcare concerns may slightly reduce willingness despite medium trust in authorities.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal time commitment) mitigate her constraints, though financial and childcare concerns may slightly reduce willingness despite medium trust in authorities.""
+}
+```",,2026-06-05T04:36:41.263242+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P03,high,5,True,True,True,40,"High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite trust in authorities and access to a doctor.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time off work, childcare, long wait) and documentation barriers disproportionately burden her low-income, time-constrained situation, despite trust in authorities and access to a doctor.""
+}
+```",,2026-06-05T04:36:42.658730+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,low,1,True,True,True,65,"Moderate trust in public health, low logistical barriers (flexible hours, nearby location, minimal documentation), and convenience may encourage vaccination, but financial constraints and lack of regular healthcare access could reduce urgency.","```json
+{
+  ""willingness"": 65,
+  ""rationale"": ""Moderate trust in public health, low logistical barriers (flexible hours, nearby location, minimal documentation), and convenience may encourage vaccination, but financial constraints and lack of regular healthcare access could reduce urgency.""
+}
+```",,2026-06-05T04:36:44.082833+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,high,1,True,True,True,40,"Moderate trust in public health and part-time flexibility slightly support willingness, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare responsibilities likely reduce it.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and part-time flexibility slightly support willingness, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare responsibilities likely reduce it.""
+}
+```",,2026-06-05T04:36:45.543307+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,low,2,True,True,True,65,"Low-income, logistical convenience (flexible hours, nearby location, minimal time), and medium trust in authorities increase willingness, but lack of regular healthcare access and childcare responsibilities may slightly reduce it.","```json
+{
+  ""willingness"": 65,
+  ""rationale"": ""Low-income, logistical convenience (flexible hours, nearby location, minimal time), and medium trust in authorities increase willingness, but lack of regular healthcare access and childcare responsibilities may slightly reduce it.""
+}
+```",,2026-06-05T04:36:46.863904+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,high,2,True,True,True,40,"Lower willingness due to logistical barriers (income verification, long wait times, advance scheduling), lack of a regular healthcare provider, and competing priorities (childcare, part-time work). Medium trust in authorities limits motivation but does not fully deter action.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Lower willingness due to logistical barriers (income verification, long wait times, advance scheduling), lack of a regular healthcare provider, and competing priorities (childcare, part-time work). Medium trust in authorities limits motivation but does not fully deter action.""
+}
+```",,2026-06-05T04:36:48.299414+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,low,3,True,True,True,65,"Moderate willingness due to convenient access (nearby, flexible hours, low time commitment) and medium trust in authorities, but tempered by low income, lack of regular healthcare access, and childcare responsibilities.","```json
+{
+  ""willingness"": 65,
+  ""rationale"": ""Moderate willingness due to convenient access (nearby, flexible hours, low time commitment) and medium trust in authorities, but tempered by low income, lack of regular healthcare access, and childcare responsibilities.""
+}
+```",,2026-06-05T04:36:49.963937+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,high,3,True,True,True,40,"Low income, lack of regular healthcare access, and logistical barriers (e.g., in-person registration, documentation requirements, long wait times) reduce willingness, though medium trust in public health authorities provides moderate counterbalance.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Low income, lack of regular healthcare access, and logistical barriers (e.g., in-person registration, documentation requirements, long wait times) reduce willingness, though medium trust in public health authorities provides moderate counterbalance.""
+}
+```",,2026-06-05T04:36:51.260458+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,low,4,True,True,True,65,"Moderate trust in public health, low logistical barriers (nearby, flexible hours, quick process), and part-time flexibility increase willingness, but low income and lack of regular healthcare access may slightly reduce urgency or perceived importance.","```json
+{
+  ""willingness"": 65,
+  ""rationale"": ""Moderate trust in public health, low logistical barriers (nearby, flexible hours, quick process), and part-time flexibility increase willingness, but low income and lack of regular healthcare access may slightly reduce urgency or perceived importance.""
+}
+```",,2026-06-05T04:36:52.822216+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,high,4,True,True,True,40,"Moderate trust in public health and part-time flexibility slightly support willingness, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare responsibilities likely reduce it.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and part-time flexibility slightly support willingness, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare responsibilities likely reduce it.""
+}
+```",,2026-06-05T04:36:54.340909+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,low,5,True,True,True,65,"Low-income, lack of regular healthcare access, and medium trust in authorities slightly reduce willingness, but convenience (flexible hours, nearby location, minimal time commitment) and part-time work flexibility increase likelihood.","```json
+{
+  ""willingness"": 65,
+  ""rationale"": ""Low-income, lack of regular healthcare access, and medium trust in authorities slightly reduce willingness, but convenience (flexible hours, nearby location, minimal time commitment) and part-time work flexibility increase likelihood.""
+}
+```",,2026-06-05T04:36:55.710358+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P04,high,5,True,True,True,40,"Moderate trust in public health and part-time flexibility slightly favor willingness, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare responsibilities likely reduce it.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and part-time flexibility slightly favor willingness, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare responsibilities likely reduce it.""
+}
+```",,2026-06-05T04:36:57.194630+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,low,1,True,True,True,70,"High convenience (nearby, flexible hours, minimal time) aligns with her part-time work and childcare needs, though medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time) aligns with her part-time work and childcare needs, though medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.""
+}
+```",,2026-06-05T04:36:58.580943+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,high,1,True,True,True,40,"The logistical barriers (in-person registration, documentation requirements, long wait times) and lack of a regular healthcare provider reduce willingness, despite medium trust in public health authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (in-person registration, documentation requirements, long wait times) and lack of a regular healthcare provider reduce willingness, despite medium trust in public health authorities and flexible work hours.""
+}
+```",,2026-06-05T04:36:59.931734+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,low,2,True,True,True,70,"High convenience (nearby, flexible hours, minimal time/disruption) aligns with her logistical constraints, though medium trust in authorities and lack of a regular healthcare provider slightly temper willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time/disruption) aligns with her logistical constraints, though medium trust in authorities and lack of a regular healthcare provider slightly temper willingness.""
+}
+```",,2026-06-05T04:37:01.254058+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,high,2,True,True,True,40,"The logistical barriers (income verification, long wait times, advance scheduling) and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (income verification, long wait times, advance scheduling) and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities and flexible work hours.""
+}
+```",,2026-06-05T04:37:02.714416+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,low,3,True,True,True,70,"High convenience (nearby, flexible hours, minimal time) and low barriers (no documentation beyond ID) likely outweigh medium trust in authorities, but financial constraints and lack of regular healthcare may slightly reduce urgency.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time) and low barriers (no documentation beyond ID) likely outweigh medium trust in authorities, but financial constraints and lack of regular healthcare may slightly reduce urgency.""
+}
+```",,2026-06-05T04:37:04.179486+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,high,3,True,True,True,40,"The logistical barriers (income verification, long wait times, advance scheduling) and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (income verification, long wait times, advance scheduling) and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities and flexible work hours.""
+}
+```",,2026-06-05T04:37:05.680665+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,low,4,True,True,True,70,"High convenience (nearby, flexible hours, quick process) aligns with her part-time work and childcare needs, but medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High convenience (nearby, flexible hours, quick process) aligns with her part-time work and childcare needs, but medium trust in authorities and lack of a regular healthcare provider slightly reduce willingness.""
+}
+```",,2026-06-05T04:37:07.083198+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,high,4,True,True,True,40,"The logistical barriers (in-person registration, documentation requirements, long wait times) and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (in-person registration, documentation requirements, long wait times) and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities and flexible work hours.""
+}
+```",,2026-06-05T04:37:08.578454+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,low,5,True,True,True,70,"High convenience (nearby, flexible hours, quick process) and low barriers (no documentation beyond ID) likely outweigh medium trust in authorities, but financial/time constraints and lack of regular healthcare access may still introduce hesitation.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""High convenience (nearby, flexible hours, quick process) and low barriers (no documentation beyond ID) likely outweigh medium trust in authorities, but financial/time constraints and lack of regular healthcare access may still introduce hesitation.""
+}
+```",,2026-06-05T04:37:09.952912+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P04,high,5,True,True,True,40,"The logistical barriers (in-person registration, documentation, long wait times, and advance scheduling) combined with low income, childcare responsibilities, and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (in-person registration, documentation, long wait times, and advance scheduling) combined with low income, childcare responsibilities, and lack of a regular healthcare provider reduce willingness, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:37:11.564243+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,low,1,True,True,True,70,"Moderate trust in public health, convenient access (flexible hours, nearby location, minimal time commitment), and civic responsibility may outweigh logistical barriers like lack of a regular doctor, but financial constraints and childcare needs could slightly reduce willingness.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""Moderate trust in public health, convenient access (flexible hours, nearby location, minimal time commitment), and civic responsibility may outweigh logistical barriers like lack of a regular doctor, but financial constraints and childcare needs could slightly reduce willingness.""
+}
+```",,2026-06-05T04:37:13.082719+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,high,1,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial verification hurdles likely reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial verification hurdles likely reduce willingness.""
+}
+```",,2026-06-05T04:37:14.532331+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,low,2,True,True,True,70,"Her medium trust in public health, flexible work hours, and convenient access (nearby, quick, no documentation barriers) likely outweigh logistical concerns, though financial constraints and lack of regular healthcare may slightly reduce urgency.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""Her medium trust in public health, flexible work hours, and convenient access (nearby, quick, no documentation barriers) likely outweigh logistical concerns, though financial constraints and lack of regular healthcare may slightly reduce urgency.""
+}
+```",,2026-06-05T04:37:15.885050+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,high,2,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial constraints likely reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial constraints likely reduce willingness.""
+}
+```",,2026-06-05T04:37:17.579099+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,low,3,True,True,True,70,"Her medium trust in public health, flexible work hours, and convenient access (nearby, quick, no documentation barriers) likely outweigh logistical concerns, though financial constraints and lack of regular healthcare may slightly reduce urgency.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""Her medium trust in public health, flexible work hours, and convenient access (nearby, quick, no documentation barriers) likely outweigh logistical concerns, though financial constraints and lack of regular healthcare may slightly reduce urgency.""
+}
+```",,2026-06-05T04:37:18.794054+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,high,3,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial constraints could significantly reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial constraints could significantly reduce willingness.""
+}
+```",,2026-06-05T04:37:20.401396+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,low,4,True,True,True,70,"Moderate trust in public health, convenient access, and flexible scheduling likely outweigh logistical barriers, though lack of a regular healthcare provider and low income may slightly reduce urgency.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""Moderate trust in public health, convenient access, and flexible scheduling likely outweigh logistical barriers, though lack of a regular healthcare provider and low income may slightly reduce urgency.""
+}
+```",,2026-06-05T04:37:21.649636+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,high,4,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare needs could reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (income verification, long wait, lack of regular healthcare access) and childcare needs could reduce willingness.""
+}
+```",,2026-06-05T04:37:22.935563+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,low,5,True,True,True,70,"Moderate trust in public health, convenient access (flexible hours, nearby location, minimal time), and civic responsibility likely outweigh logistical barriers, though financial constraints and lack of regular healthcare may slightly reduce urgency.","```json
+{
+  ""willingness"": 70,
+  ""rationale"": ""Moderate trust in public health, convenient access (flexible hours, nearby location, minimal time), and civic responsibility likely outweigh logistical barriers, though financial constraints and lack of regular healthcare may slightly reduce urgency.""
+}
+```",,2026-06-05T04:37:25.316326+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P04,high,5,True,True,True,40,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial constraints (low income, no regular healthcare access) likely reduce willingness.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (long wait, paperwork, lack of childcare) and financial constraints (low income, no regular healthcare access) likely reduce willingness.""
+}
+```",,2026-06-05T04:37:26.714831+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,low,1,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular healthcare provider and medium trust in authorities may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular healthcare provider and medium trust in authorities may slightly dampen willingness.""
+}
+```",,2026-06-05T04:37:28.145577+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,high,1,True,True,True,40,"High procedural costs (time, documentation, travel) and lack of a regular healthcare provider create significant barriers, despite medium trust in authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time, documentation, travel) and lack of a regular healthcare provider create significant barriers, despite medium trust in authorities and flexible work hours.""
+}
+```",,2026-06-05T04:37:30.583545+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,low,2,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular healthcare provider and medium trust in authorities may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular healthcare provider and medium trust in authorities may slightly dampen willingness.""
+}
+```",,2026-06-05T04:37:31.863901+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,high,2,True,True,True,40,"High procedural costs (in-person registration, documentation, long wait times) and lack of a regular healthcare provider create significant barriers, despite medium trust in authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (in-person registration, documentation, long wait times) and lack of a regular healthcare provider create significant barriers, despite medium trust in authorities and flexible work hours.""
+}
+```",,2026-06-05T04:37:33.269143+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,low,3,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular healthcare provider and medium trust in authorities may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular healthcare provider and medium trust in authorities may slightly dampen willingness.""
+}
+```",,2026-06-05T04:37:34.622463+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,high,3,True,True,True,40,"High procedural costs (time, documentation, travel) disproportionately burden her due to low income, childcare needs, and lack of a regular clinic, despite medium trust in authorities.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time, documentation, travel) disproportionately burden her due to low income, childcare needs, and lack of a regular clinic, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:37:35.940985+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,low,4,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular doctor and medium trust in authorities may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical challenges, but lack of a regular doctor and medium trust in authorities may slightly dampen willingness.""
+}
+```",,2026-06-05T04:37:37.299561+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,high,4,True,True,True,40,"High procedural costs (in-person registration, documentation, long wait times) and lack of a regular healthcare provider create significant barriers, despite medium trust in authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (in-person registration, documentation, long wait times) and lack of a regular healthcare provider create significant barriers, despite medium trust in authorities and flexible work hours.""
+}
+```",,2026-06-05T04:37:38.730100+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,low,5,True,True,True,75,"Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical hurdles, but lack of a regular doctor and medium trust in authorities may slightly dampen willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""Low procedural barriers (flexible hours, nearby location, minimal documentation) and immediate confirmation reduce logistical hurdles, but lack of a regular doctor and medium trust in authorities may slightly dampen willingness.""
+}
+```",,2026-06-05T04:37:40.092037+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P04,high,5,True,True,True,40,"High procedural costs (time, documentation, travel) disproportionately burden her due to low income, childcare needs, and lack of a regular clinic, despite medium trust in authorities.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (time, documentation, travel) disproportionately burden her due to low income, childcare needs, and lack of a regular clinic, despite medium trust in authorities.""
+}
+```",,2026-06-05T04:37:41.562501+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,low,1,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs moderate trust in authorities and logistical barriers, though financial constraints and childcare responsibilities may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs moderate trust in authorities and logistical barriers, though financial constraints and childcare responsibilities may slightly reduce willingness.""
+}
+```",,2026-06-05T04:37:42.953594+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,high,1,True,True,True,40,"Moderate trust in public health and part-time flexibility slightly support willingness, but low income, childcare constraints, distant clinic, and burdensome registration process significantly reduce likelihood of follow-through.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and part-time flexibility slightly support willingness, but low income, childcare constraints, distant clinic, and burdensome registration process significantly reduce likelihood of follow-through.""
+}
+```",,2026-06-05T04:37:44.374963+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,low,2,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while low income and childcare responsibilities may still pose minor barriers.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while low income and childcare responsibilities may still pose minor barriers.""
+}
+```",,2026-06-05T04:37:45.695883+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,high,2,True,True,True,40,"Moderate trust in public health and part-time flexibility slightly favor willingness, but low income, childcare constraints, distant clinic, and burdensome in-person registration process create significant barriers.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and part-time flexibility slightly favor willingness, but low income, childcare constraints, distant clinic, and burdensome in-person registration process create significant barriers.""
+}
+```",,2026-06-05T04:37:47.145943+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,low,3,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while financial constraints and childcare responsibilities may slightly reduce urgency.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while financial constraints and childcare responsibilities may slightly reduce urgency.""
+}
+```",,2026-06-05T04:37:48.509240+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,high,3,True,True,True,40,"Moderate trust in public health and logistical barriers (transportation, childcare, time off work, and lengthy in-person process) reduce willingness, though financial constraints may slightly increase motivation if incentives exist.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and logistical barriers (transportation, childcare, time off work, and lengthy in-person process) reduce willingness, though financial constraints may slightly increase motivation if incentives exist.""
+}
+```",,2026-06-05T04:37:49.887895+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,low,4,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while low income and childcare responsibilities may increase motivation for accessible preventive care.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while low income and childcare responsibilities may increase motivation for accessible preventive care.""
+}
+```",,2026-06-05T04:37:51.413201+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,high,4,True,True,True,40,"Moderate trust in public health and part-time flexibility are offset by low income, childcare constraints, distant clinic, and burdensome in-person registration requirements.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and part-time flexibility are offset by low income, childcare constraints, distant clinic, and burdensome in-person registration requirements.""
+}
+```",,2026-06-05T04:37:52.866655+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,low,5,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while low income and childcare responsibilities may increase motivation for accessible preventive care.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, while low income and childcare responsibilities may increase motivation for accessible preventive care.""
+}
+```",,2026-06-05T04:37:54.640793+00:00
+Mistral Large,Mistral,mistralai/mistral-large,neutral,P05,high,5,True,True,True,40,"Moderate trust in public health and logistical barriers (distance, paperwork, wait time, childcare needs) likely reduce willingness, though flexible work hours may slightly offset this.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""Moderate trust in public health and logistical barriers (distance, paperwork, wait time, childcare needs) likely reduce willingness, though flexible work hours may slightly offset this.""
+}
+```",,2026-06-05T04:37:56.136557+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,low,1,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, especially given her need to balance work and childcare.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, especially given her need to balance work and childcare.""
+}
+```",,2026-06-05T04:37:57.507551+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,high,1,True,True,True,40,"The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, given her low income, childcare responsibilities, and part-time work constraints.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, given her low income, childcare responsibilities, and part-time work constraints.""
+}
+```",,2026-06-05T04:37:58.920300+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,low,2,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her part-time work and childcare needs, though medium trust in authorities and logistical barriers (e.g., clinic distance) may slightly temper willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her part-time work and childcare needs, though medium trust in authorities and logistical barriers (e.g., clinic distance) may slightly temper willingness.""
+}
+```",,2026-06-05T04:38:00.500890+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,high,2,True,True,True,40,"The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.""
+}
+```",,2026-06-05T04:38:02.131855+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,low,3,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her part-time work and childcare needs, though medium trust in authorities and logistical barriers (e.g., clinic distance) may slightly temper willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her part-time work and childcare needs, though medium trust in authorities and logistical barriers (e.g., clinic distance) may slightly temper willingness.""
+}
+```",,2026-06-05T04:38:03.521414+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,high,3,True,True,True,40,"The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.""
+}
+```",,2026-06-05T04:38:05.040128+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,low,4,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, especially given her need to balance work and childcare.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) likely outweighs medium trust in authorities, especially given her need to balance work and childcare.""
+}
+```",,2026-06-05T04:38:06.409871+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,high,4,True,True,True,40,"The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.""
+}
+```",,2026-06-05T04:38:07.777201+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,low,5,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) aligns with her part-time work and childcare needs, though medium trust in authorities and logistical barriers may slightly temper willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) aligns with her part-time work and childcare needs, though medium trust in authorities and logistical barriers may slightly temper willingness.""
+}
+```",,2026-06-05T04:38:09.174230+00:00
+Mistral Large,Mistral,mistralai/mistral-large,autonomy,P05,high,5,True,True,True,40,"The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""The logistical barriers (distance, paperwork, long wait times) and need for income verification may deter her, despite medium trust in authorities, due to time constraints and childcare challenges.""
+}
+```",,2026-06-05T04:38:10.667981+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,low,1,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) and medium trust in public health authorities likely outweigh logistical barriers (low income, childcare needs), especially given civic responsibility awareness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) and medium trust in public health authorities likely outweigh logistical barriers (low income, childcare needs), especially given civic responsibility awareness.""
+}
+```",,2026-06-05T04:38:12.112278+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,high,1,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.""
+}
+```",,2026-06-05T04:38:13.461978+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,low,2,True,True,True,75,"High convenience (nearby, flexible hours, minimal time) and medium trust in authorities likely outweigh logistical barriers (low income, childcare), especially given civic responsibility and ease of access.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time) and medium trust in authorities likely outweigh logistical barriers (low income, childcare), especially given civic responsibility and ease of access.""
+}
+```",,2026-06-05T04:38:14.737947+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,high,2,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.""
+}
+```",,2026-06-05T04:38:16.080757+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,low,3,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) and medium trust in public health authorities likely outweigh logistical barriers, though financial constraints and childcare responsibilities may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) and medium trust in public health authorities likely outweigh logistical barriers, though financial constraints and childcare responsibilities may slightly reduce willingness.""
+}
+```",,2026-06-05T04:38:17.427472+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,high,3,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.""
+}
+```",,2026-06-05T04:38:18.754401+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,low,4,True,True,True,75,"High convenience (nearby location, flexible hours, minimal time commitment) and medium trust in public health authorities likely outweigh logistical barriers, though financial constraints and childcare responsibilities may slightly reduce willingness.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby location, flexible hours, minimal time commitment) and medium trust in public health authorities likely outweigh logistical barriers, though financial constraints and childcare responsibilities may slightly reduce willingness.""
+}
+```",,2026-06-05T04:38:20.001422+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,high,4,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.""
+}
+```",,2026-06-05T04:38:21.293752+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,low,5,True,True,True,75,"High convenience (nearby, flexible hours, minimal time) and medium trust in authorities likely outweigh logistical barriers (low income, childcare), especially given civic responsibility and public health alignment.","```json
+{
+  ""willingness"": 75,
+  ""rationale"": ""High convenience (nearby, flexible hours, minimal time) and medium trust in authorities likely outweigh logistical barriers (low income, childcare), especially given civic responsibility and public health alignment.""
+}
+```",,2026-06-05T04:38:22.557279+00:00
+Mistral Large,Mistral,mistralai/mistral-large,collective,P05,high,5,True,True,True,50,"Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.","```json
+{
+  ""willingness"": 50,
+  ""rationale"": ""Moderate trust in public health and civic responsibility may motivate her, but logistical barriers (distance, paperwork, wait times) and childcare needs could significantly reduce willingness.""
+}
+```",,2026-06-05T04:38:23.881105+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P05,low,1,True,True,True,80,"Low procedural barriers (nearby location, flexible hours, minimal documentation) and immediate confirmation reduce logistical challenges, while her medium trust in authorities and need for convenience likely increase willingness despite income constraints.","```json
+{
+  ""willingness"": 80,
+  ""rationale"": ""Low procedural barriers (nearby location, flexible hours, minimal documentation) and immediate confirmation reduce logistical challenges, while her medium trust in authorities and need for convenience likely increase willingness despite income constraints.""
+}
+```",,2026-06-05T04:38:25.146074+00:00
+Mistral Large,Mistral,mistralai/mistral-large,equity,P05,high,1,True,True,True,40,"High procedural costs (travel, time, documentation) and childcare barriers significantly reduce willingness, despite medium trust in authorities and flexible work hours.","```json
+{
+  ""willingness"": 40,
+  ""rationale"": ""High procedural costs (travel, time, documentation) and childcare barriers significantly reduce willingness, despite medium trust in authorities and flexible work hours.""
+}
+```",,2026-06-05T04:38:26.705996+00:00

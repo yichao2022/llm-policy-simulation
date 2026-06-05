@@ -1,0 +1,5 @@
+H1 Leave-One-Model-Out (N=15)
+==================================================
+
+PVC: min=-0.196 max=+2.365 sign_stable=NO p<.05_stable=NO
+CO: min=+2.742 max=+12.054 sign_stable=yes p<.05_stable=NO

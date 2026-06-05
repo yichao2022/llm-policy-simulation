@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\caption{Predicted administrative-burden effects by model}
+\label{tab:burden_effects}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & \(N_{\\Delta}\) & Low \(W\) & High \(W\) & \(\\bar{\\Delta}\) & SD\((\\Delta)\) & 95\\% CI low & 95\\% CI high \\
+\midrule
+Gemini 2.5 Pro & 135 & 87.93 & 23.07 & 64.85 & 6.88 & 63.69 & 66.01 \
+Gemini 2.5 Flash & 135 & 88.01 & 29.81 & 58.19 & 9.61 & 56.57 & 59.81 \
+DeepSeek-V3.2 & 135 & 76.63 & 27.52 & 49.11 & 5.25 & 48.23 & 50.00 \
+Claude Sonnet 4.6 & 135 & 71.13 & 32.09 & 39.04 & 5.79 & 38.06 & 40.01 \
+Llama 3.1 8B Instruct & 135 & 84.33 & 46.48 & 37.85 & 4.72 & 37.06 & 38.65 \
+Kimi K2.6 & 134 & 77.07 & 39.57 & 37.51 & 6.51 & 36.41 & 38.62 \
+Claude Opus 4.8 & 135 & 70.73 & 35.33 & 35.40 & 6.23 & 34.35 & 36.45 \
+GPT-4.1 mini & 135 & 76.48 & 41.44 & 35.04 & 4.51 & 34.28 & 35.80 \
+Qwen3.6-72B Instruct & 135 & 78.96 & 44.19 & 34.78 & 8.85 & 33.29 & 36.27 \
+Llama 3.1 70B Instruct & 135 & 81.11 & 48.30 & 32.81 & 9.82 & 31.16 & 34.47 \
+Cohere Command R+ & 134 & 75.11 & 45.63 & 29.48 & 5.83 & 28.49 & 30.46 \
+GPT-4.1 & 135 & 82.81 & 53.78 & 29.04 & 7.24 & 27.82 & 30.26 \
+Claude Haiku & 135 & 70.96 & 42.74 & 28.22 & 6.50 & 27.13 & 29.32 \
+GPT-4o & 135 & 83.56 & 59.67 & 23.89 & 7.17 & 22.68 & 25.10 \
+Mistral Large & 135 & 71.16 & 50.30 & 20.87 & 5.64 & 19.92 & 21.82 \
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: \(N_{\\Delta}\) reports the number of low--high burden-effect pairs per model. Low \(W\) and High \(W\) are mean predicted vaccination willingness scores under the low- and high-burden conditions. \(\\bar{\\Delta}\) is computed as Low \(W\) minus High \(W\). Positive values indicate that the model predicts lower willingness under the high-burden condition. SD\((\\Delta)\) is the standard deviation of profile--repetition-level burden effects. Confidence intervals are calculated as \(\\bar{\\Delta} \\pm 1.96 \\times SE\), where \(SE = SD(\\Delta)/\\sqrt{N_{\\Delta}}\).
+\end{flushleft}
+\end{table}

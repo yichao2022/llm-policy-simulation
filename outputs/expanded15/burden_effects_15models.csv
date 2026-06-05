@@ -1,0 +1,16 @@
+model,mean_low,mean_high,mean_delta
+Claude Sonnet 4.6,71.13,32.09,39.04
+DeepSeek-V3.2,76.63,27.52,49.11
+GPT-4.1,82.81,53.78,29.03
+GPT-4.1 mini,76.48,41.44,35.04
+GPT-4o,83.56,59.67,23.89
+Gemini 2.5 Flash,88.01,29.81,58.2
+Gemini 2.5 Pro,87.93,23.07,64.86
+Llama 3.1 70B Instruct,81.11,48.3,32.81
+Qwen3.6-72B Instruct,78.96,44.19,34.77
+Claude Haiku,70.96,42.74,28.22
+Claude Opus 4.8,70.73,35.33,35.4
+Cohere Command R+,75.11,45.63,29.48
+Kimi K2.6,77.07,39.55,37.51
+Llama 3.1 8B Instruct,84.33,46.48,37.85
+Mistral Large,71.16,50.3,20.87

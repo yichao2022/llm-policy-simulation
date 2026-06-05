@@ -1,0 +1,4 @@
+PVC: min=0.91, max=2.69, sign_stable=Yes, p<0.05 in 15/15 LOMO
+access_barriers: min=6.92, max=10.55, sign_stable=Yes, p<0.05 in 15/15 LOMO
+collective_responsibility: min=-7.97, max=-2.61, sign_stable=Yes, p<0.05 in 15/15 LOMO
+coercive_backlash: min=0.93, max=9.09, sign_stable=Yes, p<0.05 in 14/15 LOMO

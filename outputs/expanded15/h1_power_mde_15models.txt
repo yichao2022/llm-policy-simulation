@@ -1,0 +1,5 @@
+H1 Power/MDE (N=15)
+==============================
+
+PVC: residual_sd=12.24 se_factor=1.9658
+CO: residual_sd=11.39 se_factor=3.4554

@@ -1,0 +1,7 @@
+Contrast,Coefficient,SE,t,p,CI_lower,CI_upper
+Autonomy vs. neutral,2.6204,0.344,7.618,0.0,1.9458,3.2949
+Collective obligation vs. neutral,-10.5426,0.344,-30.649,0.0,-11.2172,-9.868
+Equity/access vs. neutral,6.287,0.344,18.277,0.0,5.6125,6.9616
+N,2160.0,,,,,
+R²,0.6653,,,,,
+Adj R²,0.6603,,,,,

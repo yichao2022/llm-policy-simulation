@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Within-model frame-manipulation effects}
+\label{tab:h3_frame_manipulation}
+\begin{tabular}{lrrrrr}
+\toprule
+Frame contrast & Coefficient & SE & \(t\) & 95\% CI & \(p\) \\
+\midrule
+Autonomy vs. neutral & 2.6204 & 0.3440 & 7.618 & [1.9458, 3.2949] & 0.0000 \\
+Collective obligation vs. neutral & -10.5426 & 0.3440 & -30.649 & [-11.2172, -9.8680] & 0.0000 \\
+Equity/access vs. neutral & 6.2870 & 0.3440 & 18.277 & [5.6125, 6.9616] & 0.0000 \\
+\midrule
+\(N\) & \multicolumn{5}{r}{2160} \\
+\(R^2\) & \multicolumn{5}{r}{0.6653} \\
+Adjusted \(R^2\) & \multicolumn{5}{r}{0.6603} \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: The dependent variable is the profile--repetition-level burden effect, \(\Delta = W^{low} - W^{high}\). The neutral frame is the omitted reference category. The pooled model includes four base models: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.6-72B Instruct, and Mistral Large, with model and profile fixed effects. Positive coefficients indicate larger predicted reductions in willingness under high administrative burden.
+\end{flushleft}
+\end{table}

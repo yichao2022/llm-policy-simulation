@@ -1,0 +1,16 @@
+Model,Contrast,Coefficient,SE,p,R2,Adj_R2,N
+GPT-4.1,autonomy,3.0741,0.3994,0.0,0.8535,0.8452,540
+GPT-4.1,collective,-8.0222,0.3994,0.0,0.8535,0.8452,540
+GPT-4.1,equity,5.3704,0.3994,0.0,0.8535,0.8452,540
+Llama 3.1 70B Instruct,autonomy,2.3333,0.6532,0.0004,0.7237,0.708,540
+Llama 3.1 70B Instruct,collective,-16.1852,0.6532,0.0,0.7237,0.708,540
+Llama 3.1 70B Instruct,equity,-0.1111,0.6532,0.865,0.7237,0.708,540
+Qwen3.6-72B Instruct,autonomy,1.8519,0.7728,0.0169,0.707,0.6903,540
+Qwen3.6-72B Instruct,collective,-10.963,0.7728,0.0,0.707,0.6903,540
+Qwen3.6-72B Instruct,equity,12.8889,0.7728,0.0,0.707,0.6903,540
+Mistral Large,autonomy,3.2222,0.4348,0.0,0.8142,0.8037,540
+Mistral Large,collective,-7.0,0.4348,0.0,0.8142,0.8037,540
+Mistral Large,equity,7.0,0.4348,0.0,0.8142,0.8037,540
+Pooled,autonomy,2.6204,0.344,0.0,0.6653,0.6603,2160
+Pooled,collective,-10.5426,0.344,0.0,0.6653,0.6603,2160
+Pooled,equity,6.287,0.344,0.0,0.6653,0.6603,2160

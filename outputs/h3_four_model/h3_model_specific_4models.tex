@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Model-specific frame-manipulation effects}
+\label{tab:h3_model_specific_effects}
+\begin{tabular}{lrrrrrr}
+\toprule
+Frame contrast & GPT-4.1 & Llama 3.1 70B Instruct & Qwen3.6-72B Instruct & Mistral Large & Pooled \\
+\midrule
+Autonomy vs. neutral & 3.074*** & 2.333*** & 1.852* & 3.222*** & 2.620*** \\
+Collective obligation vs. neutral & -8.022*** & -16.185*** & -10.963*** & -7.000*** & -10.543*** \\
+Equity/access vs. neutral & 5.370*** & -0.111 & 12.889*** & 7.000*** & 6.287*** \\
+\midrule
+\(R^2\) & 0.854 & 0.724 & 0.707 & 0.814 & 0.665 \\
+Adjusted \(R^2\) & 0.845 & 0.708 & 0.690 & 0.804 & 0.660 \\
+\(N\) & 540 & 540 & 540 & 540 & 2160 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each model-specific column reports a regression of \(\Delta\) on frame indicators and profile fixed effects for the indicated model. The pooled column reports the main H3 specification for the four-model H3 subset with model and profile fixed effects. The neutral frame is the omitted reference category. Positive coefficients indicate larger predicted burden effects relative to neutral; negative coefficients indicate smaller predicted burden effects. \({}^{*}p<0.05\), \({}^{**}p<0.01\), \({}^{***}p<0.001\).
+\end{flushleft}
+\end{table}

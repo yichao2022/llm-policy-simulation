@@ -82,11 +82,18 @@ def fit_h1(df, drop_profile=None):
 
 
 def fit_h2(df, drop_profile=None):
+    """Canonical H2 specification (2026-09-17): model + profile fixed effects,
+    frame indicators only; PVOC belongs to H1 and does not enter this model."""
     d = df if drop_profile is None else df[df.profile_id != drop_profile]
-    form = "delta ~ PVOC + " + " + ".join(FRAMES_H2)
+    form = "delta ~ C(model) + C(profile_id) + " + " + ".join(FRAMES_H2)
     r = smf.ols(form, data=d).fit(cov_type="cluster",
                                   cov_kwds={"groups": d.model.astype(str) + "|" + d.profile_id.astype(str)})
-    return {f: (r.params[f], r.pvalues[f]) for f in FRAMES_H2} | {"n": int(r.nobs)}
+    out = {}
+    for f in FRAMES_H2:
+        name = [n for n in r.params.index if n == f or n.startswith(f"{f}[T.")]
+        assert len(name) == 1, f"ambiguous coefficient for {f}: {name}"
+        out[f] = (r.params[name[0]], r.pvalues[name[0]])
+    return out | {"n": int(r.nobs)}
 
 
 def fit_h3(df, drop_profile=None):

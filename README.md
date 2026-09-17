@@ -31,7 +31,9 @@ analyze_canonical_tables.py            →  outputs/canonical/table1_diagnostics
 analyze_canonical_orientation.py       →  outputs/canonical/table2_orientation_profiles.csv  (+ H1)
 analyze_h3.py                          →  outputs/h3_clustered_results.csv, h3_model_specific_full_4models.csv,
                                           h3_mean_delta_by_model_frame.csv, frame_delta_analysis.csv
-analyze_canonical_h2.py                →  outputs/canonical/h2_frame_decomposition.csv
+analyze_canonical_h2_fe.py             →  outputs/canonical/h2_fe_main.csv (+ h2_fe_lomo.csv, h2_fe_lopo.csv)
+                                          H2 main model: model FE + profile FE + frame indicators, no PVOC
+analyze_canonical_h2.py                →  outputs/canonical/h2_frame_decomposition.csv  (frame-coding loader; PVOC-adjusted comparison spec)
 analyze_lopo.py                        →  outputs/lopo_robustness.csv       (leave-one-profile-out)
 plot_h1_canonical.py                   →  output.png                        (manuscript Figure 2)
 plot_fig3_forest.py                    →  fig3_h3_forest.pdf               (manuscript Figure 3)
@@ -44,12 +46,13 @@ plot_fig3_forest.py                    →  fig3_h3_forest.pdf               (ma
 | Figure 1 (diagnostic framework) | `fig1_conceptual.py` (manuscript repo) | `fig1_conceptual.pdf` |
 | Table 1 (PVOC, low/high willingness, burden effect) | `analyze_canonical_orientation.py`, `analyze_canonical_tables.py` | `outputs/canonical/table2_orientation_profiles.csv`, `table3_burden_effects.csv` |
 | Figure 2 (PVOC vs burden effect) | `plot_h1_canonical.py` | `output.png` |
-| Table 2 (H2 frame–outcome associations) | `analyze_canonical_h2.py` | `outputs/canonical/h2_frame_decomposition.csv` |
+| Table 2 (H2 frame–outcome associations) | `analyze_canonical_h2_fe.py` (main spec) ← `analyze_canonical_h2.py` (frame coding) | `outputs/canonical/h2_fe_main.csv`; PVOC-adjusted comparison spec in `h2_frame_decomposition.csv` |
 | Figure 3 (H3 forest plot) | `plot_fig3_forest.py` ← `analyze_h3.py` | `fig3_h3_forest.pdf` ← `outputs/h3_clustered_results.csv` |
 | Supplement Table S1 (data-quality diagnostics) | `analyze_canonical_tables.py` | `outputs/canonical/table1_diagnostics.csv` |
 | Supplement H1 robustness (9 vs 15 endpoints, leave-CO-out) | `analyze_canonical_orientation.py` | `outputs/canonical/table2_orientation_profiles.csv` |
-| Supplement H2 leave-one-model-out | `analyze_canonical_h2.py` | `outputs/canonical/h2_frame_decomposition.csv` |
+| Supplement H2 leave-one-model-out | `analyze_canonical_h2_fe.py` | `outputs/canonical/h2_fe_lomo.csv` |
 | Supplement leave-one-profile-out (H1/H2/H3) | `analyze_lopo.py` | `outputs/lopo_robustness.csv` |
+| H2 specification note | `analyze_canonical_h2_fe.py` | PVOC enters H1 only; H2 uses model + profile fixed effects |
 | Supplement frame-manipulation prompts + model-specific H3 | `analyze_h3.py` | `outputs/h3_model_specific_full_4models.csv`, `h3_mean_delta_by_model_frame.csv` |
 | Prompt templates and SHA256 hashes | `canonical/run_canonical.py` | prompts embedded in the runner; hashes re-derivable |
 | Narrative frame regular expressions | `build_h2_pipeline.py` (`FRAME_RULES`) and the canonical coder | — |

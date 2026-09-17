@@ -90,6 +90,35 @@ def main() -> int:
         print(f"  {label:<24} LOMO [{lo_b:+.2f},{hi_b:+.2f}] sig {n_lomo_sig}/15  "
               f"LOPO [{lo_p:+.2f},{hi_p:+.2f}] sig {n_lopo_sig}/27")
 
+    # ---- prose claims: main text counts and the leave-one-out paragraph in the appendix
+    n_lomo_pos = int((lomo["access_barriers_b"] > 0).sum())
+    n_lopo_pos = int((lopo["access_barriers_b"] > 0).sum())
+    for phrase, name, where in ((f"{n_lomo_pos} of 15 leave-one-model-out", "main", tex),
+                                (f"{n_lopo_pos} of 27 leave-one-profile-out", "main", tex),
+                                (f"{n_lomo_pos} of 15 LOMO", "supplement", supp),
+                                (f"{n_lopo_pos} of 27 LOPO", "supplement", supp)):
+        if phrase not in where:
+            problems.append(f"{name}: missing/broken sign count {phrase!r}")
+    stale = ("sign-stable in all fifteen leave-one-model-out",
+             "positive and significant in all 27 fits",
+             "p<0.05 throughout")
+    for phrase in stale:
+        for name, doc in (("main", tex), ("supplement", supp)):
+            if phrase in doc:
+                problems.append(f"stale two-way-FE wording still present in {name}: {phrase!r}")
+    # the appendix paragraph's ranges must equal the canonical pair-FE ranges
+    anchor = "For H2 under the primary pair-fixed-effects specification"
+    if anchor in supp:
+        seg = supp[supp.index(anchor):][:600]
+        nums = [float(x) for x in re.findall(r"([+-]\d\.\d\d)", seg)]
+        want = [lopo["access_barriers_b"].min(), lopo["access_barriers_b"].max(),
+                lopo["collective_responsibility_b"].min(), lopo["collective_responsibility_b"].max(),
+                lopo["coercive_backlash_b"].min(), lopo["coercive_backlash_b"].max()]
+        if len(nums) < 6 or any(not close(g, w, 0.006) for g, w in zip(nums[:6], want)):
+            problems.append(f"appendix leave-one-out prose ranges {nums[:6]} vs canonical {[round(w,2) for w in want]}")
+    else:
+        problems.append("the appendix paragraph on pair-FE leave-one-out fits is missing")
+
     if problems:
         print("\nFAIL:")
         for p in problems:

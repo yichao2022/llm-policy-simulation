@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-H3 Four-Model Analysis: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.6-72B Instruct, Mistral Large.
+H3 Four-Model Analysis: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.7 Plus, Mistral Large.
 
 Produces:
   outputs/h3_four_model/
@@ -22,7 +22,7 @@ OUT = PROJECT / "outputs" / "h3_four_model"
 OUT.mkdir(parents=True, exist_ok=True)
 OLD = PROJECT / "outputs"
 
-MODEL_NAMES = ["GPT-4.1", "Llama 3.1 70B Instruct", "Qwen3.6-72B Instruct", "Mistral Large"]
+MODEL_NAMES = ["GPT-4.1", "Llama 3.1 70B Instruct", "Qwen3.7 Plus", "Mistral Large"]
 
 # ═══════════════════════════════════════════════════════════════
 # 1. Load and combine data
@@ -192,7 +192,7 @@ pooled_tex.extend([
     r"\bottomrule",
     r"\end{tabular}",
     r"\begin{flushleft}",
-    r"\footnotesize Notes: The dependent variable is the profile--repetition-level burden effect, \(\Delta = W^{low} - W^{high}\). The neutral frame is the omitted reference category. The pooled model includes four base models: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.6-72B Instruct, and Mistral Large, with model and profile fixed effects. Positive coefficients indicate larger predicted reductions in willingness under high administrative burden.",
+    r"\footnotesize Notes: The dependent variable is the profile--repetition-level burden effect, \(\Delta = W^{low} - W^{high}\). The neutral frame is the omitted reference category. The pooled model includes four base models: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.7 Plus, and Mistral Large, with model and profile fixed effects. Positive coefficients indicate larger predicted reductions in willingness under high administrative burden.",
     r"\end{flushleft}",
     r"\end{table}",
 ])

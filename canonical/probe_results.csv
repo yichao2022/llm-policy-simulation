@@ -10,7 +10,7 @@ Gemini 2.5 Flash,gemini,gemini-2.5-flash,gemini-2.5-flash,yes,,generativelanguag
 Llama 3.1 70B Instruct,openrouter,meta-llama/llama-3.1-70b-instruct,meta-llama/llama-3.1-70b-instruct,yes,,openrouter.ai
 Llama 3.1 8B Instruct,openrouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,yes,,openrouter.ai
 DeepSeek-V3.2,deepseek,deepseek-chat,deepseek-flash,yes,,api.deepseek.com
-Qwen3.6-72B Instruct,dashscope,qwen-max,qwen-max,yes,,dashscope.aliyuncs.com
+Qwen3.7 Plus,dashscope,qwen-max,qwen-max,yes,,dashscope.aliyuncs.com
 Mistral Large,openrouter,mistralai/mistral-large,mistralai/mistral-large,yes,,openrouter.ai
 Cohere Command R+,openrouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,yes,,openrouter.ai
 Kimi K2.6,openrouter,moonshotai/kimi-k2.6-20260420,moonshotai/kimi-k2.6,yes,,openrouter.ai

@@ -1,0 +1,8 @@
+[sim] total=270 done=3774 to_run=270 workers=6
+  [sim] 50/270
+  [sim] 100/270
+  [sim] 150/270
+  [sim] 200/270
+  [sim] 250/270
+  [sim] 270/270
+[sim] wrote /Users/cary/Documents/New project/outputs/canonical/sim_raw.csv

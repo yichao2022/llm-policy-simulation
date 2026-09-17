@@ -1,0 +1,19 @@
+[sim] total=1350 done=2961 to_run=819 workers=6
+  [sim] 50/819
+  [sim] 100/819
+  [sim] 150/819
+  [sim] 200/819
+  [sim] 250/819
+  [sim] 300/819
+  [sim] 350/819
+  [sim] 400/819
+  [sim] 450/819
+  [sim] 500/819
+  [sim] 550/819
+  [sim] 600/819
+  [sim] 650/819
+  [sim] 700/819
+  [sim] 750/819
+  [sim] 800/819
+  [sim] 819/819
+[sim] wrote /Users/cary/Documents/New project/outputs/canonical/sim_raw.csv

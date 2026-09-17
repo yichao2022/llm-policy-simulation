@@ -107,12 +107,19 @@ def call_model(route: str, model_id: str, system_prompt: str, user_prompt: str,
     temp = P.TEMPERATURE if temperature is None else temperature
 
     if route == "anthropic":
-        j = _post(f"{base}/messages",
-                  {"x-api-key": key, "anthropic-version": "2023-06-01",
-                   "content-type": "application/json"},
-                  {"model": model_id, "max_tokens": mt, "temperature": temp,
-                   "system": system_prompt,
-                   "messages": [{"role": "user", "content": user_prompt}]})
+        headers = {"x-api-key": key, "anthropic-version": "2023-06-01",
+                   "content-type": "application/json"}
+        body = {"model": model_id, "max_tokens": mt, "temperature": temp,
+                "system": system_prompt,
+                "messages": [{"role": "user", "content": user_prompt}]}
+        try:
+            j = _post(f"{base}/messages", headers, body)
+        except RuntimeError as e:
+            # Newer Anthropic models (e.g. claude-opus-4-8) reject `temperature` outright.
+            if "temperature" not in str(e):
+                raise
+            body.pop("temperature", None)
+            j = _post(f"{base}/messages", headers, body)
         text = "".join(b.get("text", "") for b in j.get("content", []))
         return text, j.get("model", ""), "api.anthropic.com", _usage("anthropic", j)
 
@@ -124,7 +131,7 @@ def call_model(route: str, model_id: str, system_prompt: str, user_prompt: str,
                   {"content-type": "application/json"},
                   {"systemInstruction": {"parts": [{"text": system_prompt}]},
                    "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
-                   "generationConfig": {"temperature": temp, "maxOutputTokens": max(mt, 512)}})
+                   "generationConfig": {"temperature": temp, "maxOutputTokens": max(mt, 4096)}})
         cands = j.get("candidates") or []
         text = ""
         if cands:
@@ -213,7 +220,7 @@ def build_plan_h3(models, profiles, scenarios):
     """H3 unit = one (profile, frame, repetition) burden contrast, so each unit needs the
     low AND high scenario under the SAME frame. Frame order is randomized per (profile, rep);
     the low/high order inside a pair is randomized too. Result: 27 x 5 x 4 x 2 = 1080 calls/model."""
-    h3_models = {"GPT-4.1", "Llama 3.1 70B Instruct", "Qwen3.6-72B Instruct", "Mistral Large"}
+    h3_models = {"GPT-4.1", "Llama 3.1 70B Instruct", "Qwen3.7 Plus", "Mistral Large"}
     by_level = {s["burden_level"]: s["scenario_text"] for s in scenarios}
     plan, i = [], 0
     for m in models:
@@ -278,14 +285,20 @@ def run_block(plan, out_path, system_for, user_for, parse_fn, label):
     if out_path.exists():
         with open(out_path, newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):
-                if not (r.get("error") or "").strip():
-                    done.add(r["run_id"])
+                # "done" is keyed by CELL, not run_id: run_id is just the position in the current
+                # plan, so a re-planned run (e.g. after a model rename) shifts the id->cell mapping
+                # and an id-keyed done-set silently skips work or reruns finished work.
+                if not (r.get("error") or "").strip() and str(r.get("json_valid", "")).lower() in ("true", "1"):
+                    done.add((r.get("model"), r.get("frame", ""), r.get("profile_id", ""),
+                              r.get("burden_level", ""), str(r.get("repetition", ""))))
     new_file = not out_path.exists()
     fh = open(out_path, "a", newline="", encoding="utf-8")
     w = csv.DictWriter(fh, fieldnames=FIELDS)
     if new_file:
         w.writeheader(); fh.flush()
-    todo = [r for r in plan if r["run_id"] not in done]
+    todo = [r for r in plan
+            if (r["model"], r.get("frame", ""), r.get("profile_id", ""),
+                r.get("burden_level", ""), str(r.get("repetition", ""))) not in done]
     print(f"[{label}] total={len(plan)} done={len(done)} to_run={len(todo)} workers={WORKERS}")
 
     def one(row):
@@ -332,8 +345,10 @@ def run_block(plan, out_path, system_for, user_for, parse_fn, label):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["lock", "probe", "plan", "sim", "h3", "orient", "all"])
+    ap.add_argument("--only", default="", help="comma-separated model names; restricts this run")
     a = ap.parse_args()
     models = load_models()
+    keep = {s.strip() for s in a.only.split(",") if s.strip()}
 
     if a.cmd in ("lock", "all"):
         p = P.write_lock(HERE / "protocol.lock.json")
@@ -372,6 +387,11 @@ def main():
     sim_plan = build_plan_sim(models, profiles, scenarios)
     h3_plan = build_plan_h3(models, profiles, scenarios)
     items, orient_user, ori_plan = build_plan_orient(models)
+    # --only filters the plan rows (not the model list) so run_ids keep matching the frozen plan.
+    if keep:
+        sim_plan = [r for r in sim_plan if r["model"] in keep]
+        h3_plan = [r for r in h3_plan if r["model"] in keep]
+        ori_plan = [r for r in ori_plan if r["model"] in keep]
 
     if a.cmd in ("plan", "all"):
         print(write_plan(sim_plan, PLANS / "plan_sim.csv"), len(sim_plan))

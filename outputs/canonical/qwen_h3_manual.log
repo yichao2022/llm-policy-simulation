@@ -1,0 +1,33 @@
+wrote /private/tmp/protocol.lock.json
+baseline system sha256   : 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe
+   H3 neutral  sha256    : 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe
+   identical (must be T) : True
+user template sha256     : 1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4
+orientation sha256       : 87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267
+
+You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: "willingness" (an integer from 0 to 100) and "rationale" (a concise string explaining the estimate in 1 to 3 sentences).
+Running 1080 Qwen H3 queries...
+  50/1080 done
+  100/1080 done
+  150/1080 done
+  200/1080 done
+  250/1080 done
+  300/1080 done
+  350/1080 done
+  400/1080 done
+  450/1080 done
+  500/1080 done
+  550/1080 done
+  600/1080 done
+  650/1080 done
+  700/1080 done
+  750/1080 done
+  800/1080 done
+  850/1080 done
+  900/1080 done
+  950/1080 done
+  1000/1080 done
+  1050/1080 done
+
+Done! Wrote 1080 Qwen rows to outputs/canonical/h3_raw.csv
+Successful: 985/1080

@@ -31,6 +31,14 @@ with open(INPUT_CSV) as f:
 
 print(f"Loaded {len(rows)} valid rows from {INPUT_CSV}")
 
+# Canonical cell = (model, frame, profile, repetition, burden). h3_raw.csv accumulates
+# appended runs (Mistral was run twice; 27 GPT-4.1 rows were re-run after HTTP 429s), so
+# keep the LAST row per cell -- that is the row the run order designates as final.
+_CELL = ('model', 'frame', 'profile_id', 'repetition', 'burden_level')
+_dedup = {tuple(r[k] for k in _CELL): r for r in rows}
+print(f"Deduped to {len(_dedup)} canonical cells (dropped {len(rows) - len(_dedup)} superseded rows)")
+rows = list(_dedup.values())
+
 # Pair low/high by (model, frame, profile_id, repetition)
 by_key = defaultdict(dict)
 for r in rows:
@@ -210,4 +218,127 @@ fig.savefig(OUT / "fig_h3_frame_effects.png", dpi=150)
 plt.close()
 print("Saved: outputs/fig_h3_frame_effects.png")
 
+# ═══════════════════════════════════════════════════════════════════
+# 7. Four-model subset analysis (GPT-4.1, Llama 3.1 70B, Qwen3.6-72B, Mistral Large)
+# ═══════════════════════════════════════════════════════════════════
+
+FOUR_MODELS = ['GPT-4.1', 'Llama 3.1 70B Instruct', 'Qwen3.7 Plus', 'Mistral Large']
+df4 = df[df['model'].isin(FOUR_MODELS)].copy()
+
+print(f"\n=== Four-model subset (N={len(df4)}) ===")
+
+# Run model-specific regressions
+model_specific = []
+for model in FOUR_MODELS:
+    mdf = df4[df4['model'] == model]
+    if len(mdf) < 10:
+        continue
+    try:
+        mod_m = smf.ols("delta ~ C(profile_id) + C(frame)", data=mdf).fit()
+        row = {'Model': model, 'R2': mod_m.rsquared, 'Adj_R2': mod_m.rsquared_adj, 'N': len(mdf)}
+        for frame in ['autonomy', 'collective', 'equity']:
+            var = f"C(frame)[T.{frame}]"
+            if var in mod_m.params.index:
+                row[f'{frame}_coef'] = mod_m.params[var]
+                row[f'{frame}_se'] = mod_m.bse[var]
+                row[f'{frame}_p'] = mod_m.pvalues[var]
+                ci = mod_m.conf_int().loc[var]
+                row[f'{frame}_ci_low'] = ci[0]
+                row[f'{frame}_ci_high'] = ci[1]
+            else:
+                row[f'{frame}_coef'] = row[f'{frame}_se'] = row[f'{frame}_p'] = row[f'{frame}_ci_low'] = row[f'{frame}_ci_high'] = float('nan')
+        model_specific.append(row)
+    except Exception as e:
+        print(f"  Warning: {model} failed: {e}")
+
+# Pooled 4-model
+mod_pooled = smf.ols("delta ~ C(model) + C(profile_id) + C(frame)", data=df4).fit()
+pooled_row = {'Model': 'Pooled', 'R2': mod_pooled.rsquared, 'Adj_R2': mod_pooled.rsquared_adj, 'N': len(df4)}
+for frame in ['autonomy', 'collective', 'equity']:
+    var = f"C(frame)[T.{frame}]"
+    if var in mod_pooled.params.index:
+        pooled_row[f'{frame}_coef'] = mod_pooled.params[var]
+        pooled_row[f'{frame}_se'] = mod_pooled.bse[var]
+        pooled_row[f'{frame}_p'] = mod_pooled.pvalues[var]
+        ci = mod_pooled.conf_int().loc[var]
+        pooled_row[f'{frame}_ci_low'] = ci[0]
+        pooled_row[f'{frame}_ci_high'] = ci[1]
+    else:
+        pooled_row[f'{frame}_coef'] = pooled_row[f'{frame}_se'] = pooled_row[f'{frame}_p'] = pooled_row[f'{frame}_ci_low'] = pooled_row[f'{frame}_ci_high'] = float('nan')
+model_specific.append(pooled_row)
+
+# Save model-specific full CSV
+import csv
+with open(OUT / "h3_model_specific_full_4models.csv", "w", newline="") as f:
+    fieldnames = ['Model'] + [f"{f}_{s}" for f in ['autonomy','collective','equity'] for s in ['coef','se','p','ci_low','ci_high']] + ['R2','Adj_R2','N']
+    w = csv.DictWriter(f, fieldnames=fieldnames)
+    w.writeheader()
+    w.writerows(model_specific)
+print("Saved: outputs/h3_model_specific_full_4models.csv")
+
+# Print summary
+for row in model_specific:
+    print(f"\n{row['Model']}: R²={row['R2']:.3f}, N={row['N']}")
+    for frame in ['autonomy','collective','equity']:
+        c = row.get(f'{frame}_coef', float('nan'))
+        ci_l = row.get(f'{frame}_ci_low', float('nan'))
+        ci_h = row.get(f'{frame}_ci_high', float('nan'))
+        print(f"  {frame}: β={c:+.2f} [{ci_l:.2f}, {ci_h:.2f}]")
+
 print("\n=== Done ===")
+
+# ═══════════════════════════════════════════════════════════════════
+# 8. Cluster-robust inference (SEs clustered at model x profile)
+#    Main-text H3 reports clustered SEs because the 27 profiles are the
+#    controlled test cases and queries within a profile are repeated measures.
+# ═══════════════════════════════════════════════════════════════════
+
+df['cluster'] = df['model'].astype(str) + '|' + df['profile_id'].astype(str)
+df4['cluster'] = df4['model'].astype(str) + '|' + df4['profile_id'].astype(str)
+print(f"\n=== Cluster-robust H3 (clusters = model x profile, n={df4['cluster'].nunique()}) ===")
+
+
+def _clustered(fit, data, label):
+    r = fit.get_robustcov_results(cov_type='cluster', groups=data['cluster'])
+    out = {}
+    for frame in ['autonomy', 'collective', 'equity']:
+        var = f"C(frame)[T.{frame}]"
+        i = list(fit.params.index).index(var)
+        ci = r.conf_int()[i]
+        out[frame] = {'coef': fit.params[var], 'se': r.bse[i], 'p': r.pvalues[i],
+                      'ci_low': ci[0], 'ci_high': ci[1]}
+    # Holm over the 3 frame contrasts
+    order = sorted(out, key=lambda k: out[k]['p'])
+    for rank, name in enumerate(order, 1):
+        out[name]['holm_p'] = min(out[name]['p'] * (3 - rank + 1), 1.0)
+    print(f"\n{label}: N={int(fit.nobs)}, clusters={data['cluster'].nunique()}, "
+          f"R2={fit.rsquared:.4f}, adj R2={fit.rsquared_adj:.4f}")
+    for frame in ['autonomy', 'collective', 'equity']:
+        c = out[frame]
+        print(f"  {frame:<11} beta={c['coef']:+.4f}  SE={c['se']:.4f}  "
+              f"p={c['p']:.4g}  Holm p={c['holm_p']:.4g}  95%CI=[{c['ci_low']:.3f},{c['ci_high']:.3f}]")
+    return out
+
+
+pooled_cl = _clustered(mod_pooled, df4.assign(cluster=df4['model'].astype(str) + '|' + df4['profile_id'].astype(str)), 'Pooled four-model')
+
+rows_cl = [{'Model': 'Pooled', 'N': int(mod_pooled.nobs),
+            'clusters': df4['cluster'].nunique(),
+            'R2': mod_pooled.rsquared, 'Adj_R2': mod_pooled.rsquared_adj,
+            **{f"{k}_{s}": pooled_cl[k][s] for k in pooled_cl for s in ('coef', 'se', 'p', 'holm_p', 'ci_low', 'ci_high')}}]
+for model in FOUR_MODELS:
+    mdf = df4[df4['model'] == model].copy()
+    if len(mdf) < 10:
+        continue
+    fit = smf.ols("delta ~ C(profile_id) + C(frame)", data=mdf).fit()
+    cl = _clustered(fit, mdf.assign(cluster=model + '|' + mdf['profile_id'].astype(str)), model)
+    rows_cl.append({'Model': model, 'N': int(fit.nobs), 'clusters': mdf['profile_id'].nunique(),
+                    'R2': fit.rsquared, 'Adj_R2': fit.rsquared_adj,
+                    **{f"{k}_{s}": cl[k][s] for k in cl for s in ('coef', 'se', 'p', 'holm_p', 'ci_low', 'ci_high')}})
+
+with open(OUT / "h3_clustered_results.csv", "w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=list(rows_cl[0].keys()))
+    w.writeheader()
+    w.writerows(rows_cl)
+print("\nSaved: outputs/h3_clustered_results.csv")
+

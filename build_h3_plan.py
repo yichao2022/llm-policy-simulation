@@ -16,9 +16,9 @@ wb = openpyxl.load_workbook(INPUT_XLSX, read_only=True)
 ws = wb['Models']
 mheaders = [str(h) for h in next(ws.iter_rows(values_only=True))]
 models = [dict(zip(mheaders, row)) for row in ws.iter_rows(values_only=True)]
-# Filter: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.6-72B Instruct
+# Filter: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.7 Plus
 h3_models = [m for m in models if m['model'] in (
-    'GPT-4.1', 'Llama 3.1 70B Instruct', 'Qwen3.6-72B Instruct'
+    'GPT-4.1', 'Llama 3.1 70B Instruct', 'Qwen3.7 Plus'
 )]
 print(f"H3 models: {[m['model'] for m in h3_models]}")
 

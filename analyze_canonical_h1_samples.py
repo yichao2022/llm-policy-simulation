@@ -100,6 +100,10 @@ if __name__ == "__main__":
         ("Collective obligation (standardised)", "N=15", [z15[m]["CO"] for m in models], [burden[m] for m in models]),
         ("Leave-CO-out composite", "N=15", [composite(z15, m, [d for d in DIMS if d != "CO"]) for m in models], [burden[m] for m in models]),
     ]
+    # Methods claim: "We also fit each orientation dimension separately as a diagnostic check."
+    # All five dimensions must therefore appear in the supplement, not only CO.
+    for d in DIMS:
+        specs.append((f"{d} (standardised)", "N=15", [z15[m][d] for m in models], [burden[m] for m in models]))
     for predictor, sample, x, y in specs:
         r = reg(x, y)
         r["mde80"] = mde(r)

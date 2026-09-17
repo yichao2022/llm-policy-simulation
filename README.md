@@ -34,7 +34,7 @@ analyze_h3.py                          →  outputs/h3_clustered_results.csv, h3
 analyze_canonical_h2_pairfe.py         →  outputs/canonical/h2_pairfe_main.csv (+ lomo/lopo/diagnostics); H2 PRIMARY spec
 canonical/run_comprehension.py            →  outputs/canonical/comp_raw.csv (auxiliary burden-classification diagnostic, 15 x 27 x 2 = 810 calls, 2026-09-17)
 analyze_comprehension.py                 →  outputs/canonical/comp_summary.csv (per-model + pooled accuracy, exact 95% CI; 100% for all models)
-analyze_canonical_h1_samples.py          →  outputs/canonical/h1_sample_comparison.csv (Table 12 rows, both standardisations, analytic MDE80)
+analyze_canonical_h1_samples.py     →  outputs/canonical/h1_sample_comparison.csv (H1 sample comparison, Table S13; also the five dimension-specific fits of Table S14)          →  outputs/canonical/h1_sample_comparison.csv (Table 12 rows, both standardisations, analytic MDE80)
 check_table12_claims.py                  →  guard: Table 12 rows/note vs h1_sample_comparison.csv
 check_model_routes.py                    →  guard: Appendix A model table vs the executed plan (canonical/plans/plan_sim.csv)
 analyze_canonical_h2_fe.py             →  outputs/canonical/h2_fe_main.csv (+ h2_fe_lomo.csv, h2_fe_lopo.csv); H2 SECONDARY spec (two-way FE)
@@ -108,3 +108,5 @@ response files in `outputs/canonical/` are the frozen inputs behind every number
 ## Auxiliary comprehension diagnostic (Appendix E)
 
 `python3 canonical/run_comprehension.py plan|run` fields the burden-classification prompt (system-prompt SHA256 `4bf68c6c…`, plan SHA256 `96777194…`) over 15 endpoints x 27 profiles x 2 conditions = 810 one-word calls, appending to `outputs/canonical/comp_raw.csv` (plan: `canonical/plans/plan_comp.csv`). Run it with `env -u DASHSCOPE_API_KEY` so the shell's older DashScope key cannot shadow `.env`. `analyze_comprehension.py` writes `outputs/canonical/comp_summary.csv`. It is a separate administration from the frozen canonical run and is labelled as such in the manuscript.
+
+`check_table12_claims.py` now also verifies Table S14 (all five dimension-specific regressions, not only collective obligation) against `h1_sample_comparison.csv`.

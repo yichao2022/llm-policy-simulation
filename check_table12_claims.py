@@ -67,6 +67,27 @@ def main() -> int:
         if phrase not in supp:
             problems.append(f"the standardisation statement {phrase!r} is missing from the supplement")
 
+    # Dimension-specific table (all five dimensions, not only collective obligation)
+    dtab = supp[supp.index("\\label{tab:h1_dimension_checks}"):]
+    dtab = dtab[:dtab.index("\\end{table}")]
+    for d in ("AP", "ST", "CO", "BS", "CA"):
+        row = next((ln for ln in dtab.splitlines() if ln.startswith(d + " &")), None)
+        if row is None:
+            problems.append(f"dimension row missing from the dimension-specific table: {d}")
+            continue
+        cells = [c.strip() for c in row.rstrip("\\\\ ").split("&")]
+        b, se, ci, p, r2 = num(cells[1]), num(cells[2]), cells[3], num(cells[4]), num(cells[5])
+        want = ref.loc[(f"{d} (standardised)", "N=15")]
+        lo, hi = [num(v) for v in ci.strip("[]").split(",")]
+        for got, w, what, tol in ((b, want["b"], "coefficient", 0.006), (se, want["se"], "SE", 0.006),
+                                  (lo, want["lo"], "CI lower", 0.006), (hi, want["hi"], "CI upper", 0.006),
+                                  (p, want["p"], "p-value", 0.001), (r2, want["r2"], "R^2", 0.001)):
+            if abs(got - w) > tol:
+                problems.append(f"{d} dimension row: {what} = {got} but canonical = {w:.3f}")
+        print(f"  {d:<3} dimension (N=15)  b={b:+7.2f} SE={se:.2f} p={p:.3f} R2={r2:.3f}")
+    if "Table~\\ref{tab:h1_dimension_checks}" not in supp:
+        problems.append("the supplement never points to the dimension-specific table")
+
     if problems:
         print("\nFAIL:")
         for p in problems:

@@ -102,8 +102,16 @@ if __name__ == "__main__":
         b = lopo[f"{f}_b"]
         print(f"  {f:<26} min={b.min():+7.2f} max={b.max():+7.2f}  positive={int((b>0).sum())}/27  p<0.05 in {int((lopo[f'{f}_p']<0.05).sum())}/27")
 
-    main = pd.DataFrame([{"frame": f, "prevalence": df[f].mean(), **{k: v[k] for k in ("b", "se", "p", "lo", "hi")}}
-                         for f, v in frame_coefs(r_fe).items()])
+    from statsmodels.stats.multitest import multipletests
+    coefs = frame_coefs(r_fe)
+    p_raw = [coefs[f]["p"] for f in FRAMES]
+    reject, p_bh, _, _ = multipletests(p_raw, alpha=0.10, method="fdr_bh")
+    print("\n=== Benjamini-Hochberg adjustment (3 retained frames, q = 0.10) ===")
+    for f, pr, pb, rj in zip(FRAMES, p_raw, p_bh, reject):
+        print(f"  {f:<26} raw p={pr:.5f}  BH-adjusted p={pb:.5f}  significant={bool(rj)}")
+    main = pd.DataFrame([{"frame": f, "prevalence": df[f].mean(),
+                          **{k: coefs[f][k] for k in ("b", "se", "p", "lo", "hi")}, "p_bh": pb}
+                         for f, pb in zip(FRAMES, p_bh)])
     main.to_csv(CAN / "h2_fe_main.csv", index=False)
     lomo.to_csv(CAN / "h2_fe_lomo.csv", index=False)
     lopo.to_csv(CAN / "h2_fe_lopo.csv", index=False)

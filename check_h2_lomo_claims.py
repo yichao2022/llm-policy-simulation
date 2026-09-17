@@ -49,6 +49,21 @@ def main() -> int:
         flip = " " if stable else " NOT"
         print(f"  {label:<24} range {min(b):+.2f}..{max(b):+.2f}  sign-stable={stable:<5} "
               f"ever p<0.05={any_sig:<5} -> table cell {claim!r}")
+    # Table 2 p-values must match the canonical H2 run: BH column = p_bh, note lists raw p
+    import pandas as pd
+    main_csv = pd.read_csv(CAN / "h2_fe_main.csv").set_index("frame")
+    for key, label in FRAMES.items():
+        row = next((ln for ln in tex.splitlines() if ln.startswith(label + " &")), None)
+        if row is None:
+            continue
+        cells = [c.strip().replace("\\%", "%") for c in row.split("&")]
+        p_col = [c for c in cells if c.replace(".", "").isdigit()]
+        if p_col and abs(float(p_col[-1]) - main_csv.loc[key, "p_bh"]) > 0.001:
+            problems.append(f"{label}: table p={p_col[-1]} but BH-adjusted p={main_csv.loc[key,'p_bh']:.3f}")
+    for key, label in FRAMES.items():
+        raw = f"{main_csv.loc[key, 'p']:.3f}"
+        if f"{raw}" not in tex:
+            problems.append(f"{label}: unadjusted p ({raw}) is not reported anywhere in the manuscript")
     note = re.search(r"LOMO sign stability indicates([^\\\\]*)", tex)
     if "does not imply statistical significance" not in tex:
         problems.append("table note does not state that sign stability is not statistical significance")

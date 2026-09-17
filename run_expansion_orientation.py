@@ -7,6 +7,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
+import headroom_integration
 PROJECT = Path(__file__).resolve().parent
 KEY = os.environ['OPENROUTER_API_KEY']
 OR_BASE = "https://openrouter.ai/api/v1"

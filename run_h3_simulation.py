@@ -7,6 +7,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
+import headroom_integration
 
 PROJECT = Path(__file__).resolve().parent
 PLAN_CSV = PROJECT / "data" / "frame_manipulation_plan.csv"
@@ -21,8 +22,12 @@ PROVIDER_CONFIG = {
               "model_override": "qwen-max"},
     "Meta": {"env_key": "OPENROUTER_API_KEY", "base_url": "https://openrouter.ai/api/v1",
              "model_override": "meta-llama/llama-3.1-70b-instruct"},
+    "MiMo": {"env_key": "MIMO_API_KEY", "base_url": "https://token-plan-sgp.xiaomimimo.com/v1",
+              "model_override": "mimo-v2.5-pro"},
+    "LMStudio": {"env_key": "LMSTUDIO_API_KEY", "base_url": "http://127.0.0.1:1234/v1",
+                  "model_override": "llama-3.3-70b-instruct-abliterated"},
 }
-OPENAI_COMPATIBLE = {"OpenAI", "DeepSeek", "Qwen", "Meta"}
+OPENAI_COMPATIBLE = {"OpenAI", "DeepSeek", "Qwen", "Meta", "MiMo", "LMStudio"}
 MAX_RETRIES, BASE_DELAY, MAX_DELAY = 5, 2, 120
 
 OUTPUT_COLS = ["run_id","model","provider","api_model","frame","profile_id","burden_level",
@@ -67,20 +72,24 @@ def call_openai_compat(row):
     client = OpenAI(api_key=os.environ[cfg["env_key"]],
                     base_url=cfg.get("base_url"))
     model_id = cfg.get("model_override", row["api_model"])
+    msgs = headroom_integration.compress_messages(
+        [{"role":"system","content":row["system_prompt"]},
+         {"role":"user","content":row["user_prompt"]}],
+        model=model_id)
     r = client.chat.completions.create(
-        model=model_id, max_tokens=512, temperature=0,
-        messages=[{"role":"system","content":row["system_prompt"]},
-                  {"role":"user","content":row["user_prompt"]}])
+        model=model_id, max_tokens=512, temperature=0, messages=msgs)
     return r.choices[0].message.content or ""
 
 def call_anthropic(row):
     from anthropic import Anthropic
     cfg = PROVIDER_CONFIG[row["provider"]]
     client = Anthropic(api_key=os.environ[cfg["env_key"]])
+    msgs = headroom_integration.compress_messages(
+        [{"role":"user","content":row["user_prompt"]}],
+        model=row["api_model"])
     r = client.messages.create(
         model=row["api_model"], max_tokens=512, temperature=0,
-        system=row["system_prompt"],
-        messages=[{"role":"user","content":row["user_prompt"]}])
+        system=row["system_prompt"], messages=msgs)
     return r.content[0].text if r.content else ""
 
 def call_google(row):

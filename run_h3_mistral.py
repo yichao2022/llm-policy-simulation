@@ -9,6 +9,7 @@ import csv, json, os, re, time
 from datetime import datetime, timezone
 from pathlib import Path
 from openai import OpenAI
+import headroom_integration
 
 PROJECT = Path(__file__).resolve().parent
 OUTPUT_CSV = PROJECT / "outputs" / "expanded15" / "h3_mistral_large_raw.csv"
@@ -140,15 +141,12 @@ for row in rows:
     result["error"] = ""
 
     try:
+        msgs = headroom_integration.compress_messages(
+            [{"role": "system", "content": row["system_prompt"]},
+             {"role": "user", "content": row["user_prompt"]}],
+            model=MODEL_ID)
         response = client.chat.completions.create(
-            model=MODEL_ID,
-            messages=[
-                {"role": "system", "content": row["system_prompt"]},
-                {"role": "user", "content": row["user_prompt"]},
-            ],
-            temperature=TEMP,
-            max_tokens=256,
-        )
+            model=MODEL_ID, messages=msgs, temperature=TEMP, max_tokens=256)
         raw = response.choices[0].message.content or ""
         result["raw_output"] = raw.strip()
 

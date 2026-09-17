@@ -10,10 +10,11 @@ import matplotlib.pyplot as plt
 
 PROJECT = Path(__file__).resolve().parent
 OUT = PROJECT / "outputs"
-INPUT_CSV = OUT / "frame_manipulation_outputs.csv"
+# Use canonical data
+INPUT_CSV = Path("outputs/canonical/h3_raw.csv")
 
 if not INPUT_CSV.exists():
-    print(f"ERROR: {INPUT_CSV} not found. Run run_h3_simulation.py first.")
+    print(f"ERROR: {INPUT_CSV} not found. Run canonical simulation first.")
     exit(1)
 
 # ═══════════════════════════════════════════════════════════════════

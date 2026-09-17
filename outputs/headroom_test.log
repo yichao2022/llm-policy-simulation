@@ -1,0 +1,67 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                         HEADROOM PROXY                                 ║
+║           The Context Optimization Layer for LLM Applications          ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+Starting proxy server...
+
+  URL:          http://127.0.0.1:8787
+  Mode:         token
+  Optimization: ENABLED
+  Caching:      ENABLED
+  Rate Limit:   ENABLED
+  Memory:       DISABLED
+  License:      OSS (no license key)
+  Code-Aware:   DISABLED  (install headroom-ai[code] to enable)
+  Context Tool: rtk
+  Extensions:   (none discovered)
+  Stateless:    YES (no filesystem writes — memory, logs, TOIN disabled)
+  Telemetry:    DISABLED
+
+Routing:
+  /v1/messages                    → https://api.anthropic.com
+  /v1/chat/completions            → https://api.openai.com
+  /v1/responses                   → https://api.openai.com  (HTTP + WebSocket)
+  /v1internal:streamGenerateContent → https://cloudcode-pa.googleapis.com
+
+Usage:
+  Claude Code:   ANTHROPIC_BASE_URL=http://127.0.0.1:8787 claude
+  Codex / OpenAI: OPENAI_BASE_URL=http://127.0.0.1:8787/v1 your-app
+
+Endpoints:
+  GET  /livez      Process liveness
+  GET  /readyz     Traffic readiness
+  GET  /health     Aggregate health
+  GET  /stats      Detailed statistics
+  GET  /stats-history Durable compression history + display session
+  GET  /metrics    Prometheus metrics
+
+Press Ctrl+C to stop.
+
+ERROR:    Traceback (most recent call last):
+  File "/Users/cary/Documents/New project/.venv/lib/python3.13/site-packages/starlette/routing.py", line 638, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+               ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cary/Documents/New project/.venv/lib/python3.13/site-packages/headroom/proxy/server.py", line 1461, in lifespan
+    await proxy.startup()
+  File "/Users/cary/Documents/New project/.venv/lib/python3.13/site-packages/headroom/proxy/server.py", line 873, in startup
+    self.http_client = httpx.AsyncClient(
+                       ~~~~~~~~~~~~~~~~~^
+        timeout=httpx.Timeout(
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        http2=self.config.http2,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/cary/Documents/New project/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1394, in __init__
+    raise ImportError(
+    ...<2 lines>...
+    ) from None
+ImportError: Using http2=True, but the 'h2' package is not installed. Make sure to install httpx using `pip install httpx[http2]`.
+
+ERROR:    Application startup failed. Exiting.

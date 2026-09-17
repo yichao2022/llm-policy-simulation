@@ -18,6 +18,7 @@ import openpyxl
 from dotenv import load_dotenv
 
 load_dotenv()
+import headroom_integration
 
 # ── Paths ────────────────────────────────────────────────────────
 PROJECT = Path(__file__).resolve().parent
@@ -73,10 +74,26 @@ PROVIDER_CONFIG = {
         "extra_body": {},
         "model_override": "meta-llama/llama-3.1-70b-instruct",  # xlsx has Together AI naming
     },
+    "MiMo": {
+        "env_key": "MIMO_API_KEY",
+        "base_url": "https://token-plan-sgp.xiaomimimo.com/v1",
+        "temperature_field": "temperature",
+        "temperature": 0,
+        "extra_body": {},
+        "model_override": "mimo-v2.5-pro",
+    },
+    "LMStudio": {
+        "env_key": "LMSTUDIO_API_KEY",
+        "base_url": "http://127.0.0.1:1234/v1",
+        "temperature_field": "temperature",
+        "temperature": 0,
+        "extra_body": {},
+        "model_override": "llama-3.3-70b-instruct-abliterated",
+    },
 }
 
 # Providers that use the OpenAI client shape (/v1/chat/completions)
-OPENAI_COMPATIBLE = {"OpenAI", "DeepSeek", "Qwen", "Meta"}
+OPENAI_COMPATIBLE = {"OpenAI", "DeepSeek", "Qwen", "Meta", "MiMo", "LMStudio"}
 
 # ── Prompt template ──────────────────────────────────────────────
 SYSTEM_PROMPT = (
@@ -239,6 +256,7 @@ def call_openai_compatible(record: dict, config: dict) -> dict:
         # We handle Google separately below.
         pass
 
+    kwargs["messages"] = headroom_integration.compress_messages(kwargs["messages"], model=model_id)
     response = client.chat.completions.create(**kwargs)
     content = response.choices[0].message.content or ""
     return {"raw_output": content}
@@ -257,14 +275,16 @@ def call_anthropic(record: dict, config: dict) -> dict:
     system_prompt = SYSTEM_PROMPT
     user_prompt = build_prompt(record)
 
+    msgs = headroom_integration.compress_messages(
+        [{"role": "user", "content": user_prompt}],
+        model=record["api_model"],
+    )
     response = client.messages.create(
         model=record["api_model"],
         max_tokens=512,
         temperature=config["temperature"],
         system=system_prompt,
-        messages=[
-            {"role": "user", "content": user_prompt},
-        ],
+        messages=msgs,
     )
     content = response.content[0].text if response.content else ""
     return {"raw_output": content}

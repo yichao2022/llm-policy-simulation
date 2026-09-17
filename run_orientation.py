@@ -17,6 +17,7 @@ from collections import defaultdict
 from dotenv import load_dotenv
 
 load_dotenv()
+import headroom_integration
 
 # ── Paths ────────────────────────────────────────────────────────
 PROJECT = Path(__file__).resolve().parent
@@ -151,13 +152,12 @@ def call_openai_compatible(group: dict, config: dict) -> str:
     items = group["items"]
     user_prompt = build_user_prompt(items)
 
+    msgs = headroom_integration.compress_messages(
+        [{"role": "system", "content": SYSTEM_PROMPT},
+         {"role": "user", "content": user_prompt}],
+        model=model_id)
     response = client.chat.completions.create(
-        model=model_id,
-        max_tokens=1024,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_prompt},
-        ],
+        model=model_id, max_tokens=1024, messages=msgs,
         temperature=config["temperature"],
     )
     return response.choices[0].message.content or ""
@@ -173,12 +173,13 @@ def call_anthropic(group: dict, config: dict) -> str:
     items = group["items"]
     user_prompt = build_user_prompt(items)
 
+    msgs = headroom_integration.compress_messages(
+        [{"role": "user", "content": user_prompt}],
+        model=group["api_model"])
     response = client.messages.create(
-        model=group["api_model"],
-        max_tokens=1024,
-        temperature=config["temperature"],
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_prompt}],
+        model=group["api_model"], max_tokens=1024,
+        temperature=config["temperature"], system=SYSTEM_PROMPT,
+        messages=msgs,
     )
     return response.content[0].text if response.content else ""
 

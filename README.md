@@ -35,6 +35,7 @@ analyze_canonical_h2_fe.py             →  outputs/canonical/h2_fe_main.csv (+ 
                                           H2 main model: model FE + profile FE + frame indicators, no PVOC
 analyze_canonical_h2.py                →  outputs/canonical/h2_frame_decomposition.csv  (frame-coding loader; PVOC-adjusted comparison spec)
 analyze_lopo.py                        →  outputs/lopo_robustness.csv       (leave-one-profile-out)
+analyze_h3_small_sample.py             →  outputs/h3_small_sample_inference.csv (CR1 / corrected / wild-bootstrap p)
 plot_h1_canonical.py                   →  output.png                        (manuscript Figure 2)
 plot_fig3_forest.py                    →  fig3_h3_forest.pdf               (manuscript Figure 3)
 ```
@@ -52,6 +53,7 @@ plot_fig3_forest.py                    →  fig3_h3_forest.pdf               (ma
 | Supplement H1 robustness (9 vs 15 endpoints, leave-CO-out) | `analyze_canonical_orientation.py` | `outputs/canonical/table2_orientation_profiles.csv` |
 | Supplement H2 leave-one-model-out | `analyze_canonical_h2_fe.py` | `outputs/canonical/h2_fe_lomo.csv` |
 | Supplement leave-one-profile-out (H1/H2/H3) | `analyze_lopo.py` | `outputs/lopo_robustness.csv` |
+| Supplement small-sample inference (H3, 27 clusters) | `analyze_h3_small_sample.py` | `outputs/h3_small_sample_inference.csv` |
 | H2 specification note | `analyze_canonical_h2_fe.py` | PVOC enters H1 only; H2 uses model + profile fixed effects |
 | Supplement frame-manipulation prompts + model-specific H3 | `analyze_h3.py` | `outputs/h3_model_specific_full_4models.csv`, `h3_mean_delta_by_model_frame.csv` |
 | Prompt templates and SHA256 hashes | `canonical/run_canonical.py` | prompts embedded in the runner; hashes re-derivable |
@@ -71,6 +73,7 @@ python3 analyze_canonical_orientation.py
 python3 analyze_canonical_h2.py
 python3 analyze_h3.py
 python3 analyze_lopo.py
+python3 analyze_h3_small_sample.py
 python3 plot_h1_canonical.py
 python3 plot_fig3_forest.py
 ```

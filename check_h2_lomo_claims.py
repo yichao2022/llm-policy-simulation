@@ -119,6 +119,17 @@ def main() -> int:
     else:
         problems.append("the appendix paragraph on pair-FE leave-one-out fits is missing")
 
+    # ---- appendix pointers and the retired secondary-specification leave-one-out block
+    if "Leave-one-model-out under the secondary specification" in supp:
+        problems.append("supplement still contains the bare heading for a secondary-specification LOMO block")
+    if "leave-one-out variants of both specifications" in supp:
+        problems.append("Appendix G still promises leave-one-out variants of both specifications")
+    if "Leave-one-out ranges for the primary specification" not in tex:
+        problems.append("main text does not point at the primary-specification leave-one-out ranges")
+    n_leaveout_tables = supp.count("\\label{tab:h2_pairfe_leaveout}")
+    if n_leaveout_tables != 1:
+        problems.append(f"expected exactly one leave-one-out table in the supplement, found {n_leaveout_tables}")
+
     if problems:
         print("\nFAIL:")
         for p in problems:

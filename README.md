@@ -110,3 +110,7 @@ response files in `outputs/canonical/` are the frozen inputs behind every number
 `python3 canonical/run_comprehension.py plan|run` fields the burden-classification prompt (system-prompt SHA256 `4bf68c6c…`, plan SHA256 `96777194…`) over 15 endpoints x 27 profiles x 2 conditions = 810 one-word calls, appending to `outputs/canonical/comp_raw.csv` (plan: `canonical/plans/plan_comp.csv`). Run it with `env -u DASHSCOPE_API_KEY` so the shell's older DashScope key cannot shadow `.env`. `analyze_comprehension.py` writes `outputs/canonical/comp_summary.csv`. It is a separate administration from the frozen canonical run and is labelled as such in the manuscript.
 
 `check_table12_claims.py` now also verifies Table S14 (all five dimension-specific regressions, not only collective obligation) against `h1_sample_comparison.csv`.
+
+## Blinded H2 gold coding (manual audit upgrade)
+
+`prepare_h2_gold_sample.py` writes the blinded 200-rationale sheet + separate key (seed 20260917, stratified by endpoint; re-running reproduces the same 200 ids). `code_h2_gold.py` walks the sheet one rationale at a time (digits of the frames that apply, `n` = none, `b` = back, `?` = definitions, `q` = save & quit; content is saved after every item and a re-run resumes at the first blank row). The key file is never read, so the coding stays blind to the algorithm's labels. `score_h2_gold_coding.py` then reports per-frame precision, recall, F1, exact agreement and Cohen's kappa. Self-test: pipe `printf '1\nn\n?\nb\n34\nq\n'` into it against a copy via `--sheet`.

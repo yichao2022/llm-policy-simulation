@@ -1,78 +1,101 @@
 #!/usr/bin/env python3
-"""Guard: the H2 leave-one-model-out claims in main.tex must match the canonical LOMO run.
+"""Guard: H2 numbers in the manuscript must match the canonical runs.
 
-Checks that, for each retained frame, the 'LOMO sign stability' cell in Table 2 and the
-table note agree with outputs/canonical/h2_fe_lomo.csv:
-  sign stable = coefficient keeps its sign in all 15 leave-one-model-out fits
-  (a frame can be sign-stable and still never statistically significant -- the two
-  properties are reported separately, and the note must say so).
+Checks three places against the analysis outputs:
+  1. Table 2 in main.tex — pair-FE coefficient, BH-adjusted p, and the two-way
+     fixed-effects comparison coefficient — vs outputs/canonical/h2_pairfe_main.csv
+     (and the two-way values cross-checked against h2_fe_main.csv).
+  2. The table note's reported unadjusted/BH two-way p-values vs h2_fe_main.csv.
+  3. The leave-one-out range table in supplementary.tex vs h2_pairfe_lomo.csv and
+     h2_pairfe_lopo.csv (ranges and the "0 of 15 / 0 of 27" significance counts).
 
-Exit code 0 = consistent; 1 = at least one claim contradicts the data.
+Exit 0 = consistent; 1 = at least one reported number contradicts the canonical output.
 """
-import csv
 import re
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 HOME = Path(__file__).resolve().parent
 CAN = HOME / "outputs" / "canonical"
-MAIN = Path.home() / "Documents" / "value-sensitivity-llm-audit" / "main.tex"
-FRAMES = {
-    "access_barriers": "Access barriers",
-    "collective_responsibility": "Collective responsibility",
-    "coercive_backlash": "Coercive backlash",
-}
+PAPER = Path.home() / "Documents" / "value-sensitivity-llm-audit"
+FRAMES = {"access_barriers": "Access barriers",
+          "collective_responsibility": "Collective responsibility",
+          "coercive_backlash": "Coercive backlash"}
+
+
+def close(a, b, tol=0.006):
+    return abs(float(a) - float(b)) < tol
 
 
 def main() -> int:
-    rows = list(csv.DictReader(open(CAN / "h2_fe_lomo.csv", newline="")))
-    tex = MAIN.read_text()
+    pair = pd.read_csv(CAN / "h2_pairfe_main.csv").set_index("frame")
+    two = pd.read_csv(CAN / "h2_fe_main.csv").set_index("frame")
+    lomo = pd.read_csv(CAN / "h2_pairfe_lomo.csv")
+    lopo = pd.read_csv(CAN / "h2_pairfe_lopo.csv")
+    tex = (PAPER / "main.tex").read_text()
+    supp = (PAPER / "supplementary.tex").read_text()
     problems = []
-    for key, label in FRAMES.items():
-        b = [float(r[f"{key}_b"]) for r in rows]
-        p = [float(r[f"{key}_p"]) for r in rows]
-        stable = all(v > 0 for v in b) or all(v < 0 for v in b)
-        any_sig = any(v < 0.05 for v in p)
-        row = next((ln for ln in tex.splitlines() if ln.startswith(label + " &")), None)
-        if row is None:
-            problems.append(f"{label}: table row not found")
-            continue
-        claim = row.rstrip("\\ ").split("&")[-1].strip()
-        says_stable = claim.lower().startswith("yes")
-        says_sig = "not significant" in claim.lower()
-        if says_stable != stable:
-            problems.append(f"{label}: table says sign stability={claim!r} but data says stable={stable} "
-                            f"(range {min(b):+.2f} to {max(b):+.2f})")
-        if stable and not any_sig and not says_sig:
-            problems.append(f"{label}: sign-stable but never significant -- the cell must say so "
-                            f"(currently {claim!r})")
-        flip = " " if stable else " NOT"
-        print(f"  {label:<24} range {min(b):+.2f}..{max(b):+.2f}  sign-stable={stable:<5} "
-              f"ever p<0.05={any_sig:<5} -> table cell {claim!r}")
-    # Table 2 p-values must match the canonical H2 run: BH column = p_bh, note lists raw p
-    import pandas as pd
-    main_csv = pd.read_csv(CAN / "h2_fe_main.csv").set_index("frame")
+
     for key, label in FRAMES.items():
         row = next((ln for ln in tex.splitlines() if ln.startswith(label + " &")), None)
         if row is None:
+            problems.append(f"{label}: Table 2 row not found")
             continue
-        cells = [c.strip().replace("\\%", "%") for c in row.split("&")]
-        p_col = [c for c in cells if c.replace(".", "").isdigit()]
-        if p_col and abs(float(p_col[-1]) - main_csv.loc[key, "p_bh"]) > 0.001:
-            problems.append(f"{label}: table p={p_col[-1]} but BH-adjusted p={main_csv.loc[key,'p_bh']:.3f}")
+        cells = [c.strip() for c in row.rstrip("\\ ").split("&")]
+        b_pair, se, ci, p_bh, b_two = cells[2], cells[3], cells[4], cells[5], cells[6]
+        for got, want, what in ((b_pair, pair.loc[key, "b"], "pair-FE b"),
+                                (p_bh, pair.loc[key, "p_bh"], "pair-FE BH p"),
+                                (b_two, two.loc[key, "b"], "two-way b")):
+            if not close(got, want):
+                problems.append(f"{label}: Table 2 {what} = {got} but canonical = {float(want):.3f}")
+        if not close(float(ci.strip("[]").split(",")[0].replace("\\(-", "-").replace("\\(+", "").replace("\\)", "")),
+                     pair.loc[key, "lo"], 0.02):
+            problems.append(f"{label}: Table 2 CI lower does not match the canonical interval")
+        print(f"  {label:<24} pair-FE b={float(b_pair):+.2f} BH p={float(p_bh):.2f} "
+              f"| two-way b={float(b_two):+.2f} (canonical {two.loc[key,'b']:+.2f}, "
+              f"BH p={two.loc[key,'p_bh']:.3f})")
+
+    # the secondary specification's raw and BH-adjusted p-values must be reported somewhere
+    both = tex + supp
+    for key in FRAMES:
+        raw, bh = two.loc[key, "p"], two.loc[key, "p_bh"]
+        for val, what in ((raw, "unadjusted"), (bh, "BH-adjusted")):
+            if f"{val:.3f}" not in both:
+                problems.append(f"{key}: {what} two-way p ({val:.3f}) is not reported in either document")
+
+    # leave-one-out ranges in the supplement
+    lines = supp.splitlines()
+    start = next(i for i, ln in enumerate(lines) if "tab:h2_pairfe_leaveout" in ln)
+    block = lines[start:start + 12]
     for key, label in FRAMES.items():
-        raw = f"{main_csv.loc[key, 'p']:.3f}"
-        if f"{raw}" not in tex:
-            problems.append(f"{label}: unadjusted p ({raw}) is not reported anywhere in the manuscript")
-    note = re.search(r"LOMO sign stability indicates([^\\\\]*)", tex)
-    if "does not imply statistical significance" not in tex:
-        problems.append("table note does not state that sign stability is not statistical significance")
+        row = next((ln for ln in block if ln.startswith(label + " &")), None)
+        if row is None:
+            problems.append(f"{label}: leave-one-out row not found after tab:h2_pairfe_leaveout")
+            continue
+        lo_b, hi_b = lomo[f"{key}_b"].min(), lomo[f"{key}_b"].max()
+        lo_p, hi_p = lopo[f"{key}_b"].min(), lopo[f"{key}_b"].max()
+        for span, want_lo, want_hi in ((row, lo_b, hi_b),):
+            nums = re.findall(r"([+-]\d\.\d\d)", span)
+            if len(nums) < 4 or not (close(nums[0], want_lo, 0.011) and close(nums[1], want_hi, 0.011)
+                                     and close(nums[2], lo_p, 0.011) and close(nums[3], hi_p, 0.011)):
+                problems.append(f"{label}: LOMO/LOPO ranges {nums[:4]} vs canonical "
+                                f"[{lo_b:+.2f},{hi_b:+.2f}] / [{lo_p:+.2f},{hi_p:+.2f}]")
+        n_lomo_sig = int((lomo[f"{key}_p"] < 0.05).sum())
+        n_lopo_sig = int((lopo[f"{key}_p"] < 0.05).sum())
+        if n_lomo_sig or n_lopo_sig:
+            problems.append(f"{label}: canonical leave-one-out has significant fits "
+                            f"(LOMO {n_lomo_sig}/15, LOPO {n_lopo_sig}/27) but the supplement reports 0")
+        print(f"  {label:<24} LOMO [{lo_b:+.2f},{hi_b:+.2f}] sig {n_lomo_sig}/15  "
+              f"LOPO [{lo_p:+.2f},{hi_p:+.2f}] sig {n_lopo_sig}/27")
+
     if problems:
         print("\nFAIL:")
-        for pr in problems:
-            print("  -", pr)
+        for p in problems:
+            print("  -", p)
         return 1
-    print("\nTable 2 LOMO claims are consistent with the canonical run.")
+    print("\nH2 numbers in main.tex and supplementary.tex match the canonical runs.")
     return 0
 
 

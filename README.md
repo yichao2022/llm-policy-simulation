@@ -32,6 +32,9 @@ analyze_canonical_orientation.py       →  outputs/canonical/table2_orientation
 analyze_h3.py                          →  outputs/h3_clustered_results.csv, h3_model_specific_full_4models.csv,
                                           h3_mean_delta_by_model_frame.csv, frame_delta_analysis.csv
 analyze_canonical_h2_pairfe.py         →  outputs/canonical/h2_pairfe_main.csv (+ lomo/lopo/diagnostics); H2 PRIMARY spec
+analyze_canonical_h1_samples.py          →  outputs/canonical/h1_sample_comparison.csv (Table 12 rows, both standardisations, analytic MDE80)
+check_table12_claims.py                  →  guard: Table 12 rows/note vs h1_sample_comparison.csv
+check_model_routes.py                    →  guard: Appendix A model table vs the executed plan (canonical/plans/plan_sim.csv)
 analyze_canonical_h2_fe.py             →  outputs/canonical/h2_fe_main.csv (+ h2_fe_lomo.csv, h2_fe_lopo.csv); H2 SECONDARY spec (two-way FE)
                                           H2 main model: model FE + profile FE + frame indicators, no PVOC
 analyze_canonical_h2.py                →  outputs/canonical/h2_frame_decomposition.csv  (frame-coding loader; PVOC-adjusted comparison spec)
@@ -49,6 +52,7 @@ plot_fig3_forest.py                    →  fig3_h3_forest.pdf               (ma
 | Figure 1 (diagnostic framework) | `fig1_conceptual.py` (manuscript repo) | `fig1_conceptual.pdf` |
 | Table 1 (PVOC, low/high willingness, burden effect) | `analyze_canonical_orientation.py`, `analyze_canonical_tables.py` | `outputs/canonical/table2_orientation_profiles.csv`, `table3_burden_effects.csv` |
 | Figure 2 (PVOC vs burden effect) | `plot_h1_canonical.py` | `output.png` |
+| Table 12 (H1 nine- vs fifteen-endpoint) | `analyze_canonical_h1_samples.py` | `outputs/canonical/h1_sample_comparison.csv`; PVOC scoring rule documented in Appendix B |
 | Table 2 (H2 frame–outcome associations) | `analyze_canonical_h2_pairfe.py` (PRIMARY: model x profile pair FE) ← `analyze_canonical_h2.py` (frame coding) | `outputs/canonical/h2_pairfe_main.csv`; secondary two-way FE in `h2_fe_main.csv` |
 | Figure 3 (H3 forest plot) | `plot_fig3_forest.py` ← `analyze_h3.py` | `fig3_h3_forest.pdf` ← `outputs/h3_clustered_results.csv` |
 | Supplement Table S1 (data-quality diagnostics) | `analyze_canonical_tables.py` | `outputs/canonical/table1_diagnostics.csv` |
